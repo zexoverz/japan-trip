@@ -1,10 +1,10 @@
 const stats = [
   { emoji: '📅', value: '14', label: 'Days', jp: '日間' },
-  { emoji: '🏙️', value: '5', label: 'Cities', jp: '都市' },
+  { emoji: '🏙️', value: '3', label: 'Regions', jp: '地域' },
   { emoji: '🚲', value: '2', label: 'Cycling Days', jp: '自転車' },
-  { emoji: '⛩️', value: '20+', label: 'Temples & Sites', jp: '寺社' },
+  { emoji: '🏔️', value: '1', label: 'Alpine Hike', jp: '上高地' },
   { emoji: '🃏', value: '∞', label: 'Cards to Hunt', jp: 'カード' },
-  { emoji: '💰', value: 'Rp21-35M', label: 'Budget Range', jp: '予算' },
+  { emoji: '💰', value: 'Rp22-36M', label: 'Budget Range', jp: '予算' },
 ]
 
 export default function Overview() {
@@ -15,7 +15,7 @@ export default function Overview() {
           <p className="text-sakura font-heading font-semibold text-sm tracking-widest uppercase mb-3">旅の概要 — Trip Overview</p>
           <h2 className="text-4xl sm:text-5xl font-heading font-bold text-dark mb-4">The Adventure at a Glance</h2>
           <p className="text-dark-light max-w-2xl mx-auto text-lg">
-            Two weeks across Japan — Kyoto first, countryside middle, Tokyo last for card hunting & flea market.
+            Two weeks across Japan — Kyoto first, Takayama Alps base with Kamikochi & Okuhida onsen ryokan, Tokyo last for card hunting & flea market.
           </p>
         </div>
 
@@ -41,11 +41,11 @@ export default function Overview() {
               { city: '🛬 Narita', days: 'Apr 21' },
               { city: '🚄 Shinkansen', days: '' },
               { city: '⛩️ Kyoto', days: 'Days 1-5' },
-              { city: '🦌 Nara', days: 'Day 6' },
-              { city: '🏯 Nagoya/Gifu', days: 'Days 6-7' },
-              { city: '🌲 Takayama', days: 'Days 8-9' },
-              { city: '🏔️ Hakone', days: 'Days 10-11' },
-              { city: '🏙️ Tokyo', days: 'Days 12-13' },
+              { city: '🎨 Monet\'s Pond', days: 'Day 6' },
+              { city: '🌲 Takayama', days: 'Days 6-9' },
+              { city: '🏔️ Kamikochi', days: 'Day 8' },
+              { city: '♨️ Okuhida Ryokan', days: 'Day 10' },
+              { city: '🏙️ Tokyo', days: 'Days 11-13' },
               { city: '🛫 Departure', days: 'May 4' },
             ].map((stop, i, arr) => (
               <div key={i} className="flex items-center gap-3">

@@ -4,30 +4,30 @@ const budgetData = [
   {
     category: 'Transport',
     emoji: '🚅',
-    budget: { jpy: '¥73,000', idr: 'Rp 7.3M' },
-    mid: { jpy: '¥73,000', idr: 'Rp 7.3M' },
-    note: 'JR Pass 14-day + Hakone Pass + Suica + bikes + buses',
+    budget: { jpy: '¥78,000', idr: 'Rp 7.8M' },
+    mid: { jpy: '¥78,000', idr: 'Rp 7.8M' },
+    note: 'JR Pass 14-day + Suica + bikes + Kamikochi/Okuhida/Shirakawa-go buses + ropeway',
   },
   {
     category: 'Accommodation',
     emoji: '🏨',
-    budget: { jpy: '¥79,000', idr: 'Rp 7.9M' },
-    mid: { jpy: '¥116,000', idr: 'Rp 11.6M' },
-    note: '13 nights — hostels + 1 ryokan night in Kyoto',
+    budget: { jpy: '¥75,000', idr: 'Rp 7.5M' },
+    mid: { jpy: '¥130,000', idr: 'Rp 13M' },
+    note: '13 nights — Kyoto hostel (5) + Takayama guesthouse (4) + Okuhida ryokan (1) + Tokyo (3)',
   },
   {
     category: 'Food',
     emoji: '🍜',
     budget: { jpy: '¥42,000', idr: 'Rp 4.2M' },
     mid: { jpy: '¥98,000', idr: 'Rp 9.8M' },
-    note: '14 days × 2 people — konbini to restaurants + splurges',
+    note: '14 days × 2 people — konbini to restaurants + splurges. Ryokan dinner+breakfast included!',
   },
   {
     category: 'Sightseeing',
     emoji: '⛩️',
-    budget: { jpy: '¥14,000', idr: 'Rp 1.4M' },
-    mid: { jpy: '¥19,000', idr: 'Rp 1.9M' },
-    note: 'Temples, museums, TeamLab, ropeway, Shirakawa-go',
+    budget: { jpy: '¥16,000', idr: 'Rp 1.6M' },
+    mid: { jpy: '¥22,000', idr: 'Rp 2.2M' },
+    note: 'Temples, museums, Shirakawa-go houses, Shinhotaka Ropeway',
   },
   {
     category: 'Misc/Emergency',
@@ -39,9 +39,8 @@ const budgetData = [
 ]
 
 const totals = {
-  budget: { jpy: '¥210,000', idr: 'Rp 21M' },
-  mid: { jpy: '¥300,000', idr: 'Rp 30M' },
-  splurge: { jpy: '¥350,000', idr: 'Rp 35M' },
+  budget: { jpy: '¥221,000', idr: 'Rp 22.1M' },
+  mid: { jpy: '¥358,000', idr: 'Rp 35.8M' },
 }
 
 export default function Budget() {
@@ -105,7 +104,7 @@ export default function Budget() {
             <div className="flex items-center justify-between">
               <div>
                 <div className="font-heading font-bold text-xl">Total Trip Cost</div>
-                <div className="text-white/80 text-sm">For 2 people, 14 days, 5 cities</div>
+                <div className="text-white/80 text-sm">For 2 people, 14 days, 3 regions</div>
               </div>
               <div className="text-right">
                 <div className="font-heading font-bold text-3xl">
@@ -122,7 +121,7 @@ export default function Budget() {
         {/* Per person note */}
         <p className="text-center text-sm text-dark-light mt-6">
           💡 That's about <span className="font-semibold text-sakura-dark">
-            {mode === 'budget' ? 'Rp 10.5M' : 'Rp 15M'}
+            {mode === 'budget' ? 'Rp 11M' : 'Rp 17.9M'}
           </span> per person — {mode === 'budget' ? 'super affordable!' : 'very comfortable!'}
         </p>
 
@@ -133,36 +132,36 @@ export default function Budget() {
             <div className="bg-cream/50 rounded-xl p-4">
               <div className="font-heading font-semibold text-sm">JR Pass (14-day)</div>
               <div className="text-sakura-dark font-bold">¥50,000 (~Rp 5M)</div>
-              <div className="text-xs text-dark-light mt-1">All Shinkansen + JR local trains</div>
+              <div className="text-xs text-dark-light mt-1">All Shinkansen + JR local + Hida Express</div>
             </div>
             <div className="bg-cream/50 rounded-xl p-4">
-              <div className="font-heading font-semibold text-sm">Hakone Free Pass (2-day)</div>
-              <div className="text-sakura-dark font-bold">¥6,100 (~Rp 610K)</div>
-              <div className="text-xs text-dark-light mt-1">All Hakone loop transport</div>
+              <div className="font-heading font-semibold text-sm">Kamikochi Bus (RT)</div>
+              <div className="text-sakura-dark font-bold">¥6,400 (~Rp 640K)</div>
+              <div className="text-xs text-dark-light mt-1">Takayama → Hirayu → Kamikochi</div>
             </div>
             <div className="bg-cream/50 rounded-xl p-4">
-              <div className="font-heading font-semibold text-sm">Suica Top-up</div>
-              <div className="text-sakura-dark font-bold">¥5,000 (~Rp 500K)</div>
-              <div className="text-xs text-dark-light mt-1">Metro, bus, konbini, vending</div>
-            </div>
-            <div className="bg-cream/50 rounded-xl p-4">
-              <div className="font-heading font-semibold text-sm">Narita Express (1-way)</div>
-              <div className="text-sakura-dark font-bold">¥3,250 (~Rp 325K)</div>
-              <div className="text-xs text-dark-light mt-1">Airport ↔ city</div>
-            </div>
-            <div className="bg-cream/50 rounded-xl p-4">
-              <div className="font-heading font-semibold text-sm">Bike Rentals (2 days)</div>
-              <div className="text-sakura-dark font-bold">¥2,200 (~Rp 220K)</div>
-              <div className="text-xs text-dark-light mt-1">Kyoto + Takayama cycling</div>
-            </div>
-            <div className="bg-cream/50 rounded-xl p-4">
-              <div className="font-heading font-semibold text-sm">Shirakawa-go Bus RT</div>
+              <div className="font-heading font-semibold text-sm">Shirakawa-go Bus (RT)</div>
               <div className="text-sakura-dark font-bold">¥5,200 (~Rp 520K)</div>
               <div className="text-xs text-dark-light mt-1">Takayama ↔ UNESCO village</div>
             </div>
+            <div className="bg-cream/50 rounded-xl p-4">
+              <div className="font-heading font-semibold text-sm">Okuhida Bus (RT)</div>
+              <div className="text-sakura-dark font-bold">¥3,200 (~Rp 320K)</div>
+              <div className="text-xs text-dark-light mt-1">Takayama ↔ Okuhida Onsen</div>
+            </div>
+            <div className="bg-cream/50 rounded-xl p-4">
+              <div className="font-heading font-semibold text-sm">Shinhotaka Ropeway</div>
+              <div className="text-sakura-dark font-bold">¥3,300 (~Rp 330K)</div>
+              <div className="text-xs text-dark-light mt-1">Double-decker gondola to 2,156m</div>
+            </div>
+            <div className="bg-cream/50 rounded-xl p-4">
+              <div className="font-heading font-semibold text-sm">Suica + Bikes + Misc</div>
+              <div className="text-sakura-dark font-bold">¥8,200 (~Rp 820K)</div>
+              <div className="text-xs text-dark-light mt-1">Metro, bus, konbini, bike rentals</div>
+            </div>
           </div>
           <p className="text-xs text-dark-light mt-4 bg-amber-50 rounded-lg p-3 border border-amber-200">
-            💡 <strong>JR Pass saves money</strong> for this route: Tokyo → Hakone → Kyoto → Nagoya → Takayama → Tokyo. Individual Shinkansen tickets would cost ~¥70,000+ alone!
+            💡 <strong>JR Pass saves money</strong> for this route: Tokyo → Kyoto → Nagoya → Takayama → Nagoya → Tokyo. Individual Shinkansen + Hida Express tickets would cost ~¥70,000+ alone!
           </p>
         </div>
 

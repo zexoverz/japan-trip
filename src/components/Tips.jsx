@@ -4,7 +4,7 @@ const tips = [
   {
     emoji: '🚅',
     title: 'JR Pass Saves Money',
-    content: 'For this route (Tokyo → Hakone → Kyoto → Nagoya → Takayama → Tokyo), the 14-day JR Pass (~¥50,000) SAVES money. Individual Shinkansen tickets would cost ¥70,000+. It covers all JR trains including Hida Express to Takayama.',
+    content: 'For this route (Tokyo → Kyoto → Nagoya → Takayama → Nagoya → Tokyo), the 14-day JR Pass (~¥50,000) SAVES money. Individual Shinkansen + Hida Express tickets would cost ¥70,000+. It covers all JR trains including the scenic Hida Express to Takayama.',
     tag: 'Transport',
   },
   {
@@ -56,21 +56,27 @@ const tips = [
     tag: 'Essential',
   },
   {
+    emoji: '🏔️',
+    title: 'Kamikochi Tips',
+    content: 'No cars allowed — bus access only from Takayama via Hirayu Onsen. Opens mid-April (confirm 2026 date). Weather changes fast at 1,500m — bring rain jacket + warm layer even in late April. Pack lunch from konbini — limited food at altitude. Buy round-trip bus ticket at Takayama Bus Terminal.',
+    tag: 'Hiking',
+  },
+  {
     emoji: '♨️',
     title: 'Onsen Etiquette',
-    content: 'Tattoos may be an issue at some onsen — check before going. Wash thoroughly before entering the bath. Bring a small towel. Takayama and Hakone have great onsen options.',
+    content: 'Wash thoroughly at shower stations BEFORE entering the bath. No swimsuits in traditional onsen. Tattoos may be an issue at some places — check before going. Okuhida ryokan onsen is more relaxed about tattoos than city onsen. Bring a small towel (don\'t put it in the water).',
     tag: 'Culture',
   },
   {
     emoji: '🚲',
     title: 'Bicycle Rules',
-    content: 'Ride on LEFT side of the road. Park in designated areas only. Keep bike locked at all times. Don\'t ride on sidewalks. Electric assist recommended for Kyoto (some hills).',
+    content: 'Ride on LEFT side of the road. Park in designated areas only. Keep bike locked at all times. Don\'t ride on sidewalks. Electric assist recommended for Kyoto (some hills). Takayama is dead flat — easy riding.',
     tag: 'Cycling',
   },
   {
     emoji: '💰',
     title: 'Takayama Hack',
-    content: 'Takayama is Japan\'s CHEAPEST tourist city. Hotels ¥4-6K/night, Hida beef street sushi ¥600-800, most attractions free or cheap. Plan your splurge meals in Tokyo/Kyoto, save in Takayama.',
+    content: 'Takayama is Japan\'s CHEAPEST tourist city. Guesthouse ¥4-6K/night, Hida beef street sushi ¥600-800, most attractions free or cheap. Plan your splurge meals in Tokyo/Kyoto, save in Takayama. With 5 nights here, you save a LOT.',
     tag: 'Save Money',
   },
   {
@@ -80,16 +86,16 @@ const tips = [
     tag: 'Food',
   },
   {
+    emoji: '🧳',
+    title: 'Shinkansen Luggage',
+    content: 'Reserve last-row seats on Shinkansen — there\'s a luggage space behind the back seats perfect for large suitcases. No need for Takkyubin luggage forwarding. Carry your own bags and save ¥16,000+.',
+    tag: 'Transport',
+  },
+  {
     emoji: '🚃',
     title: 'Last Train Warning',
     content: 'Check last train times! Usually 23:00-00:00 depending on the line. Miss it and you\'re taking a ¥5,000+ taxi. Google Maps shows real-time schedules.',
     tag: 'Transport',
-  },
-  {
-    emoji: '🖨️',
-    title: 'Konbini Printing',
-    content: 'Can print boarding passes, tickets, and documents at any 7-Eleven or FamilyMart using their multifunction printers. Life-saver if you need hard copies.',
-    tag: 'Tech',
   },
 ]
 
@@ -99,13 +105,14 @@ export default function Tips() {
   const tagColors = {
     Essential: 'bg-red-100 text-red-600',
     'Save Money': 'bg-green-100 text-green-700',
-    Transport: 'bg-sky/20 text-sky',
+    Transport: 'bg-sky-100 text-sky-600',
     Cards: 'bg-purple-100 text-purple-600',
     Important: 'bg-amber-100 text-amber-700',
     Tech: 'bg-blue-100 text-blue-600',
     Culture: 'bg-pink-100 text-pink-600',
     Cycling: 'bg-emerald-100 text-emerald-700',
     Food: 'bg-orange-100 text-orange-600',
+    Hiking: 'bg-amber-100 text-amber-700',
   }
 
   return (
@@ -115,7 +122,7 @@ export default function Tips() {
           <p className="text-sakura font-heading font-semibold text-sm tracking-widest uppercase mb-3">ヒント — Tips & Tricks</p>
           <h2 className="text-4xl sm:text-5xl font-heading font-bold text-dark mb-4">Travel Pro Tips</h2>
           <p className="text-dark-light max-w-2xl mx-auto text-lg">
-            15 essential tips to make your Japan trip smoother and cheaper.
+            16 essential tips to make your Japan trip smoother and cheaper.
           </p>
         </div>
 

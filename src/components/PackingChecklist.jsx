@@ -2,6 +2,17 @@ import { useState, useEffect } from 'react'
 
 const categories = [
   {
+    name: '📦 Luggage Strategy',
+    emoji: '📦',
+    items: [
+      '2 medium suitcases (you + Keiko) — bring on Shinkansen, use luggage space behind last row seats',
+      '1 small daypack each — carry daily for temples, hiking, card hunting',
+      'Overnight bag for ryokan night — leave main bags in Takayama station coin locker',
+      'Shinkansen tip: reserve last-row seats for overhead + behind-seat luggage space',
+      'Pack light — you\'ll carry bags through stations. No elevators at many rural stations!',
+    ],
+  },
+  {
     name: 'Documents & Money',
     emoji: '📄',
     items: [
@@ -34,11 +45,25 @@ const categories = [
       'Light jacket (April nights can be cool ~10-15°C)',
       'Rain jacket or compact umbrella',
       'Comfortable walking shoes (10K+ steps/day!)',
-      '5-7 t-shirts (laundry available at hotels)',
-      '3-4 pants/shorts',
-      'Underwear & socks (7+ days worth)',
-      'Sleepwear',
-      'One nicer outfit (for ryokan dinner)',
+      '5 t-shirts + 2 workout tees (coin laundry wash on Day 7 & 12)',
+      '3 pants/shorts + 1 running shorts',
+      'Underwear & socks (7 pairs — wash halfway)',
+      'One nicer outfit (ryokan dinner at Okuhida)',
+      'Running shoes (double as walking shoes)',
+      'Slip-on shoes for temples (you remove shoes 20+ times!)',
+      'Warm layer for Kamikochi (1,500m altitude — can be chilly!)',
+    ],
+  },
+  {
+    name: 'Hiking Gear (Kamikochi)',
+    emoji: '🥾',
+    items: [
+      'Sturdy hiking shoes or trail runners (trails can be muddy)',
+      'Rain jacket (mountain weather changes fast)',
+      'Warm fleece or insulating layer (1,500m elevation)',
+      'Day pack with water, snacks, konbini lunch',
+      'Sunscreen + hat (alpine sun is strong)',
+      'Small first aid kit (blister plasters!)',
     ],
   },
   {
@@ -75,7 +100,6 @@ const categories = [
       'Small notebook + pen',
       'Snacks for the flight',
       'Eye mask + neck pillow for Shinkansen naps',
-      'Sunscreen (April sun can be strong)',
       'Passport (for tax-free shopping — always carry!)',
     ],
   },
