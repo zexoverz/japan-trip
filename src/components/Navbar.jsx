@@ -6,6 +6,7 @@ const navItems = [
   { label: 'Budget', href: '#budget', jp: '予算' },
   { label: 'Cards', href: '#cards', jp: 'カード' },
   { label: 'Stay', href: '#accommodation', jp: '宿泊' },
+  { label: 'Fitness', href: '#fitness', jp: '筋トレ' },
   { label: 'Tips', href: '#tips', jp: 'ヒント' },
   { label: 'Packing', href: '#packing', jp: '荷物' },
 ]

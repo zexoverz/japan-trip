@@ -6,6 +6,7 @@ import Itinerary from './components/Itinerary'
 import Budget from './components/Budget'
 import CardHunt from './components/CardHunt'
 import Accommodation from './components/Accommodation'
+import Fitness from './components/Fitness'
 import Tips from './components/Tips'
 import PackingChecklist from './components/PackingChecklist'
 import Footer from './components/Footer'
@@ -22,6 +23,7 @@ function App() {
       <Budget />
       <CardHunt />
       <Accommodation />
+      <Fitness />
       <Tips />
       <PackingChecklist />
       <Footer />
