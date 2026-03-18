@@ -26,7 +26,7 @@ const shopTips = [
   { emoji: '📱', tip: 'Check SNKR Dunk / Mercari prices on your phone before buying to compare' },
   { emoji: '🏷️', tip: 'Tax-free! Spend ¥5,000+ at one store and show your passport for tax exemption' },
   { emoji: '💴', tip: 'Bring cash — many smaller card shops don\'t accept credit cards' },
-  { emoji: '🗣️', tip: 'Keiko can negotiate and read Japanese grading/pricing — huge advantage!' },
+  { emoji: '🗣️', tip: 'Use Google Translate camera mode to read Japanese price tags and grading info!' },
   { emoji: '📦', tip: 'Bring hard sleeves and a small card binder from home to protect purchases' },
 ]
 

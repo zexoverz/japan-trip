@@ -2,64 +2,94 @@ import { useState } from 'react'
 
 const tips = [
   {
-    emoji: '🇯🇵',
-    title: 'Keiko Advantage',
-    content: "She's Japanese! She can read menus, negotiate prices, communicate with locals, and navigate everything. This is a HUGE advantage that saves money and time. Let her take the lead at restaurants and card shops.",
-    tag: 'Essential',
-  },
-  {
-    emoji: '🏪',
-    title: 'Conbini Life',
-    content: '7-Eleven, FamilyMart, Lawson — these convenience stores are AMAZING in Japan. Breakfast here (onigiri ¥120, sandwich ¥200, coffee ¥100) saves thousands of yen. Also great for snacks, ATMs, and last-minute supplies.',
-    tag: 'Save Money',
-  },
-  {
     emoji: '🚅',
-    title: 'JR Pass Debate',
-    content: 'The 14-day JR Pass (~¥50,000) covers all Shinkansen and JR local trains. For your route (Tokyo → Kyoto → Nagoya → Tokyo), it should save money vs individual tickets. But calculate! Tokyo-Kyoto round trip alone is ~¥27,000.',
+    title: 'JR Pass Saves Money',
+    content: 'For this route (Tokyo → Hakone → Kyoto → Nagoya → Takayama → Tokyo), the 14-day JR Pass (~¥50,000) SAVES money. Individual Shinkansen tickets would cost ¥70,000+. It covers all JR trains including Hida Express to Takayama.',
     tag: 'Transport',
   },
   {
     emoji: '🏷️',
     title: 'Tax-Free Shopping',
-    content: "Spend ¥5,000+ at one store and show your passport for tax-free (10% off). Works for cards too at bigger stores like Surugaya! They'll seal items in a bag — don't open until you leave Japan.",
+    content: "Spend ¥5,000+ at one store and show your passport for tax-free (10% off). Works for card shops too at bigger stores like Surugaya! They'll seal items in a bag — don't open until you leave Japan.",
     tag: 'Save Money',
   },
   {
     emoji: '💴',
     title: 'Cash is King',
-    content: "Many small shops, restaurants, and ALL flea markets are cash-only. Withdraw at 7-Eleven ATMs (no foreign card fee). Carry at least ¥20,000-30,000 cash at all times.",
+    content: "Many small shops, restaurants, and ALL flea markets are cash-only. Withdraw at 7-Eleven ATMs (no foreign card fee). Carry at least ¥20,000-30,000 cash at all times. Bring ¥50,000+ or withdraw on arrival.",
     tag: 'Essential',
-  },
-  {
-    emoji: '🃏',
-    title: 'Card Shop Strategy',
-    content: "Visit stores in the morning for best selection before other hunters. Check SNKR Dunk / Mercari prices on your phone before buying. Compare prices across 2-3 shops before committing to big purchases.",
-    tag: 'Cards',
   },
   {
     emoji: '⚠️',
     title: 'Golden Week Warning',
-    content: 'Apr 29 - May 5 is Golden Week — Japan\'s biggest holiday period. Hotels are 2-3x more expensive, trains are packed, and popular spots have long lines. BOOK ACCOMMODATION EARLY. Consider visiting popular spots early morning.',
+    content: 'Apr 29 - May 5 is Golden Week — Japan\'s biggest holiday period. Hotels are 2-3x more expensive, trains are packed, and popular spots have long lines. BOOK ACCOMMODATION NOW.',
     tag: 'Important',
   },
   {
-    emoji: '📶',
-    title: 'Pocket WiFi / eSIM',
-    content: 'Rent a pocket WiFi at the airport (~¥500/day) or buy an eSIM before departure (cheaper, ~$15-20 for 14 days). You\'ll need internet for maps, translation, and checking card prices.',
-    tag: 'Tech',
+    emoji: '🏪',
+    title: 'Konbini Life',
+    content: '7-Eleven, FamilyMart, Lawson = AMAZING in Japan. Breakfast here (onigiri ¥120, sandwich ¥200, coffee ¥100) saves thousands of yen per day. Also great for ATMs, printing, and last-minute supplies.',
+    tag: 'Save Money',
   },
   {
     emoji: '🚃',
     title: 'Suica Card Magic',
-    content: 'Load up your Suica/Pasmo IC card and use it for EVERYTHING — trains, buses, convenience stores, vending machines, even some restaurants. Way faster than buying individual tickets.',
+    content: 'Load up your Suica card and use it for EVERYTHING — trains, buses, konbini, vending machines, even some restaurants. Way faster than buying individual tickets. Return at airport for ¥500 deposit refund.',
     tag: 'Transport',
   },
   {
-    emoji: '🛍️',
-    title: 'Flea Market Cash',
-    content: "Bring plenty of cash to flea markets — absolutely no card payments. Negotiate politely (Keiko can help!). Best finds are often in the morning when vendors are setting up.",
-    tag: 'Shopping',
+    emoji: '🃏',
+    title: 'Card Transport Safety',
+    content: 'Pack cards in hard-top loaders inside carry-on luggage. NEVER check valuable cards in hold luggage. Bring penny sleeves and a small card binder from home.',
+    tag: 'Cards',
+  },
+  {
+    emoji: '📶',
+    title: 'Pocket WiFi / eSIM',
+    content: 'Rent a pocket WiFi at the airport (~¥500/day) or buy an eSIM before departure (cheaper, ~$15-20 for 14 days). Essential for maps, translation, and checking card prices on SNKR Dunk.',
+    tag: 'Tech',
+  },
+  {
+    emoji: '👟',
+    title: 'Temple Shoes Hack',
+    content: 'Wear slip-on shoes — you\'ll take them off 20+ times at temples and ryokans. Saves tons of time and frustration vs lace-up sneakers.',
+    tag: 'Essential',
+  },
+  {
+    emoji: '♨️',
+    title: 'Onsen Etiquette',
+    content: 'Tattoos may be an issue at some onsen — check before going. Wash thoroughly before entering the bath. Bring a small towel. Takayama and Hakone have great onsen options.',
+    tag: 'Culture',
+  },
+  {
+    emoji: '🚲',
+    title: 'Bicycle Rules',
+    content: 'Ride on LEFT side of the road. Park in designated areas only. Keep bike locked at all times. Don\'t ride on sidewalks. Electric assist recommended for Kyoto (some hills).',
+    tag: 'Cycling',
+  },
+  {
+    emoji: '💰',
+    title: 'Takayama Hack',
+    content: 'Takayama is Japan\'s CHEAPEST tourist city. Hotels ¥4-6K/night, Hida beef street sushi ¥600-800, most attractions free or cheap. Plan your splurge meals in Tokyo/Kyoto, save in Takayama.',
+    tag: 'Save Money',
+  },
+  {
+    emoji: '🌅',
+    title: 'Morning Markets',
+    content: 'Takayama morning market (Miyagawa) + Nishiki Market (Kyoto) — best deals and freshest food. Go early for the best selection. Cash recommended.',
+    tag: 'Food',
+  },
+  {
+    emoji: '🚃',
+    title: 'Last Train Warning',
+    content: 'Check last train times! Usually 23:00-00:00 depending on the line. Miss it and you\'re taking a ¥5,000+ taxi. Google Maps shows real-time schedules.',
+    tag: 'Transport',
+  },
+  {
+    emoji: '🖨️',
+    title: 'Konbini Printing',
+    content: 'Can print boarding passes, tickets, and documents at any 7-Eleven or FamilyMart using their multifunction printers. Life-saver if you need hard copies.',
+    tag: 'Tech',
   },
 ]
 
@@ -73,7 +103,9 @@ export default function Tips() {
     Cards: 'bg-purple-100 text-purple-600',
     Important: 'bg-amber-100 text-amber-700',
     Tech: 'bg-blue-100 text-blue-600',
-    Shopping: 'bg-pink-100 text-pink-600',
+    Culture: 'bg-pink-100 text-pink-600',
+    Cycling: 'bg-emerald-100 text-emerald-700',
+    Food: 'bg-orange-100 text-orange-600',
   }
 
   return (
@@ -83,7 +115,7 @@ export default function Tips() {
           <p className="text-sakura font-heading font-semibold text-sm tracking-widest uppercase mb-3">ヒント — Tips & Tricks</p>
           <h2 className="text-4xl sm:text-5xl font-heading font-bold text-dark mb-4">Travel Pro Tips</h2>
           <p className="text-dark-light max-w-2xl mx-auto text-lg">
-            10 essential tips to make your Japan trip smoother and cheaper.
+            15 essential tips to make your Japan trip smoother and cheaper.
           </p>
         </div>
 

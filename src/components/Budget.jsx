@@ -4,35 +4,35 @@ const budgetData = [
   {
     category: 'Transport',
     emoji: '🚅',
-    budget: { jpy: '¥53,000', idr: 'Rp 5.3M' },
-    mid: { jpy: '¥60,000', idr: 'Rp 6M' },
-    note: 'JR Pass 14-day + Suica + Airport transfer',
+    budget: { jpy: '¥73,000', idr: 'Rp 7.3M' },
+    mid: { jpy: '¥73,000', idr: 'Rp 7.3M' },
+    note: 'JR Pass 14-day + Hakone Pass + Suica + bikes + buses',
   },
   {
     category: 'Accommodation',
     emoji: '🏨',
-    budget: { jpy: '¥80,000', idr: 'Rp 8M' },
-    mid: { jpy: '¥130,000', idr: 'Rp 13M' },
-    note: '13 nights — hostels + 1 ryokan night',
+    budget: { jpy: '¥79,000', idr: 'Rp 7.9M' },
+    mid: { jpy: '¥116,000', idr: 'Rp 11.6M' },
+    note: '13 nights — hostels + 1 ryokan night in Kyoto',
   },
   {
     category: 'Food',
     emoji: '🍜',
     budget: { jpy: '¥42,000', idr: 'Rp 4.2M' },
-    mid: { jpy: '¥80,000', idr: 'Rp 8M' },
-    note: '14 days × 2 people — conbini to restaurants',
+    mid: { jpy: '¥98,000', idr: 'Rp 9.8M' },
+    note: '14 days × 2 people — konbini to restaurants + splurges',
   },
   {
     category: 'Sightseeing',
     emoji: '⛩️',
-    budget: { jpy: '¥15,000', idr: 'Rp 1.5M' },
-    mid: { jpy: '¥25,000', idr: 'Rp 2.5M' },
-    note: 'Temples, TeamLab, museums',
+    budget: { jpy: '¥14,000', idr: 'Rp 1.4M' },
+    mid: { jpy: '¥19,000', idr: 'Rp 1.9M' },
+    note: 'Temples, museums, TeamLab, ropeway, Shirakawa-go',
   },
   {
     category: 'Misc/Emergency',
     emoji: '🆘',
-    budget: { jpy: '¥20,000', idr: 'Rp 2M' },
+    budget: { jpy: '¥10,000', idr: 'Rp 1M' },
     mid: { jpy: '¥30,000', idr: 'Rp 3M' },
     note: 'Pocket WiFi, souvenirs, unexpected costs',
   },
@@ -40,7 +40,8 @@ const budgetData = [
 
 const totals = {
   budget: { jpy: '¥210,000', idr: 'Rp 21M' },
-  mid: { jpy: '¥325,000', idr: 'Rp 32.5M' },
+  mid: { jpy: '¥300,000', idr: 'Rp 30M' },
+  splurge: { jpy: '¥350,000', idr: 'Rp 35M' },
 }
 
 export default function Budget() {
@@ -62,19 +63,19 @@ export default function Budget() {
           <div className="bg-white rounded-full p-1.5 shadow-sm border border-sakura/20 flex gap-1">
             <button
               onClick={() => setMode('budget')}
-              className={`px-6 py-2.5 rounded-full font-heading font-semibold text-sm transition-all duration-300 ${
+              className={`px-5 py-2.5 rounded-full font-heading font-semibold text-sm transition-all duration-300 ${
                 mode === 'budget' ? 'bg-sakura text-white shadow-md' : 'text-dark-light hover:text-sakura-dark'
               }`}
             >
-              💰 Budget Mode
+              💰 Budget
             </button>
             <button
               onClick={() => setMode('mid')}
-              className={`px-6 py-2.5 rounded-full font-heading font-semibold text-sm transition-all duration-300 ${
+              className={`px-5 py-2.5 rounded-full font-heading font-semibold text-sm transition-all duration-300 ${
                 mode === 'mid' ? 'bg-sakura text-white shadow-md' : 'text-dark-light hover:text-sakura-dark'
               }`}
             >
-              ✨ Comfortable Mode
+              ✨ Comfortable
             </button>
           </div>
         </div>
@@ -104,7 +105,7 @@ export default function Budget() {
             <div className="flex items-center justify-between">
               <div>
                 <div className="font-heading font-bold text-xl">Total Trip Cost</div>
-                <div className="text-white/80 text-sm">For 2 people, 14 days</div>
+                <div className="text-white/80 text-sm">For 2 people, 14 days, 5 cities</div>
               </div>
               <div className="text-right">
                 <div className="font-heading font-bold text-3xl">
@@ -121,29 +122,72 @@ export default function Budget() {
         {/* Per person note */}
         <p className="text-center text-sm text-dark-light mt-6">
           💡 That's about <span className="font-semibold text-sakura-dark">
-            {mode === 'budget' ? 'Rp 10.5M' : 'Rp 16.25M'}
+            {mode === 'budget' ? 'Rp 10.5M' : 'Rp 15M'}
           </span> per person — {mode === 'budget' ? 'super affordable!' : 'very comfortable!'}
         </p>
 
         {/* Transport breakdown */}
         <div className="mt-10 bg-white rounded-2xl p-6 shadow-sm border border-sakura/10">
           <h3 className="font-heading font-bold text-lg mb-4">🚅 Transport Breakdown</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             <div className="bg-cream/50 rounded-xl p-4">
               <div className="font-heading font-semibold text-sm">JR Pass (14-day)</div>
               <div className="text-sakura-dark font-bold">¥50,000 (~Rp 5M)</div>
               <div className="text-xs text-dark-light mt-1">All Shinkansen + JR local trains</div>
             </div>
             <div className="bg-cream/50 rounded-xl p-4">
-              <div className="font-heading font-semibold text-sm">Suica/Pasmo IC</div>
-              <div className="text-sakura-dark font-bold">¥3,000 (~Rp 300K)</div>
-              <div className="text-xs text-dark-light mt-1">Metro, bus, convenience stores</div>
+              <div className="font-heading font-semibold text-sm">Hakone Free Pass (2-day)</div>
+              <div className="text-sakura-dark font-bold">¥6,100 (~Rp 610K)</div>
+              <div className="text-xs text-dark-light mt-1">All Hakone loop transport</div>
             </div>
             <div className="bg-cream/50 rounded-xl p-4">
-              <div className="font-heading font-semibold text-sm">Airport Transfer</div>
-              <div className="text-sakura-dark font-bold">¥2,520–3,250</div>
-              <div className="text-xs text-dark-light mt-1">Skyliner or Narita Express</div>
+              <div className="font-heading font-semibold text-sm">Suica Top-up</div>
+              <div className="text-sakura-dark font-bold">¥5,000 (~Rp 500K)</div>
+              <div className="text-xs text-dark-light mt-1">Metro, bus, konbini, vending</div>
             </div>
+            <div className="bg-cream/50 rounded-xl p-4">
+              <div className="font-heading font-semibold text-sm">Narita Express (1-way)</div>
+              <div className="text-sakura-dark font-bold">¥3,250 (~Rp 325K)</div>
+              <div className="text-xs text-dark-light mt-1">Airport ↔ city</div>
+            </div>
+            <div className="bg-cream/50 rounded-xl p-4">
+              <div className="font-heading font-semibold text-sm">Bike Rentals (2 days)</div>
+              <div className="text-sakura-dark font-bold">¥2,200 (~Rp 220K)</div>
+              <div className="text-xs text-dark-light mt-1">Kyoto + Takayama cycling</div>
+            </div>
+            <div className="bg-cream/50 rounded-xl p-4">
+              <div className="font-heading font-semibold text-sm">Shirakawa-go Bus RT</div>
+              <div className="text-sakura-dark font-bold">¥5,200 (~Rp 520K)</div>
+              <div className="text-xs text-dark-light mt-1">Takayama ↔ UNESCO village</div>
+            </div>
+          </div>
+          <p className="text-xs text-dark-light mt-4 bg-amber-50 rounded-lg p-3 border border-amber-200">
+            💡 <strong>JR Pass saves money</strong> for this route: Tokyo → Hakone → Kyoto → Nagoya → Takayama → Tokyo. Individual Shinkansen tickets would cost ~¥70,000+ alone!
+          </p>
+        </div>
+
+        {/* Card budget separate */}
+        <div className="mt-6 bg-white rounded-2xl p-6 shadow-sm border border-sakura/10">
+          <h3 className="font-heading font-bold text-lg mb-4">🃏 Card Shopping Budget (Separate)</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div className="bg-purple-50 rounded-xl p-4">
+              <div className="font-heading font-semibold text-sm">Munch Psyduck PSA 10</div>
+              <div className="text-purple-700 font-bold">~Rp 20-22M</div>
+              <div className="text-xs text-dark-light mt-1">¥200-220K</div>
+            </div>
+            <div className="bg-purple-50 rounded-xl p-4">
+              <div className="font-heading font-semibold text-sm">Magikarp AR PSA 10</div>
+              <div className="text-purple-700 font-bold">~Rp 3.3M</div>
+              <div className="text-xs text-dark-light mt-1">¥33K</div>
+            </div>
+            <div className="bg-purple-50 rounded-xl p-4">
+              <div className="font-heading font-semibold text-sm">OP Manga/G5 Cards</div>
+              <div className="text-purple-700 font-bold">~Rp 14-16M</div>
+              <div className="text-xs text-dark-light mt-1">Various targets</div>
+            </div>
+          </div>
+          <div className="mt-3 bg-gradient-to-r from-purple-100 to-purple-50 rounded-xl p-4 text-center">
+            <span className="font-heading font-bold text-purple-700">Total Card Budget: ~Rp 39.5M (~¥395K)</span>
           </div>
         </div>
       </div>

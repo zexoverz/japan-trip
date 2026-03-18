@@ -75,7 +75,8 @@ const categories = [
       'Small notebook + pen',
       'Snacks for the flight',
       'Eye mask + neck pillow for Shinkansen naps',
-      'Omiyage (small gifts from Indonesia for Keiko\'s family?)',
+      'Sunscreen (April sun can be strong)',
+      'Passport (for tax-free shopping — always carry!)',
     ],
   },
 ]
