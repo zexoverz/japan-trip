@@ -36,8 +36,9 @@ const days = [
     summary: 'Thousand torii gates at dawn, Kyoto\'s Kitchen for street food, Gion geisha district at dusk.',
     dayCost: '¥4,000-6,000',
     schedule: [
-      { time: '06:30', emoji: '⏰', text: 'Early wake up — beat the crowds!' },
-      { time: '07:00', emoji: '🍙', text: 'Quick konbini breakfast on the go' },
+      { time: '05:00', emoji: '🏃', text: '5AM RUN: Kamogawa River Path (5-8km) — flat, river reflections at dawn. East bank, Gojo → Demachiyanagi → back.' },
+      { time: '05:45', emoji: '💪', text: 'PUSH: Push-ups 4×15, diamond push-ups 3×12, pike push-ups 3×10, chair dips 3×12, plank 3×45s, crunches 3×20, mountain climbers 3×30s' },
+      { time: '06:15', emoji: '🚿', text: 'Shower → breakfast → ready' },
       { time: '07:30', emoji: '🚃', text: 'JR Nara Line → Inari Station (5 min, ¥150)' },
       { time: '07:45', emoji: '⛩️', text: 'Fushimi Inari — start the thousand torii gates hike. At this hour = EMPTY, magical light!' },
       { time: '08:30', emoji: '📸', text: 'First viewpoint (Yotsutsuji intersection) — panoramic Kyoto view' },
@@ -70,7 +71,8 @@ const days = [
     summary: 'Bamboo Grove at dawn, monkey park, iconic bridge, scenic mountain train, Pontocho dinner.',
     dayCost: '¥5,000-8,000',
     schedule: [
-      { time: '07:30', emoji: '🍙', text: 'Breakfast' },
+      { time: '05:30', emoji: '🦵', text: 'LEGS: Squats 4×20, Bulgarian split squats 3×12 each, jump squats 3×10, walking lunges 3×12, calf raises 4×20, glute bridges 3×15' },
+      { time: '06:00', emoji: '🚿', text: 'Shower → breakfast → ready' },
       { time: '08:00', emoji: '🚃', text: 'JR Sagano Line → Saga-Arashiyama (15 min from Kyoto Station)' },
       { time: '08:30', emoji: '🎋', text: 'Bamboo Grove — GO EARLY! By 10am it\'s packed with tour groups. Magical in morning light.' },
       { time: '09:15', emoji: '⛩️', text: 'Tenryuji Temple — UNESCO World Heritage, stunning garden — ¥500' },
@@ -100,7 +102,8 @@ const days = [
     summary: '6+ major temples by bike in one day! Golden Pavilion, zen gardens, Philosopher\'s Path, Kiyomizu-dera. 20km flat ride.',
     dayCost: '¥5,000-7,000',
     schedule: [
-      { time: '07:00', emoji: '🍙', text: 'Early start! Konbini breakfast' },
+      { time: '05:30', emoji: '🦾', text: 'PULL: Doorframe rows 4×12, superman holds 3×30s, reverse snow angels 3×15, backpack curls 3×15, plank shoulder taps 3×20' },
+      { time: '06:00', emoji: '🚿', text: 'Shower → konbini breakfast' },
       { time: '07:30', emoji: '🚲', text: 'Rent bicycle near Kyoto Station — ¥1,000-1,500/day. Get electric assist! (J-Cycle or Kyoto Cycling Project)' },
       { time: '08:00', emoji: '🚲', text: 'Ride north to Kinkaku-ji (Golden Pavilion) — 30 min ride' },
       { time: '09:00', emoji: '✨', text: 'Kinkaku-ji opens — ¥500 entry. Gold pavilion reflected in mirror pond. ICONIC.' },
@@ -135,7 +138,8 @@ const days = [
     summary: '1,001 golden statues, manga museum paradise, then special ryokan night with kaiseki dinner.',
     dayCost: '¥20,000-28,000 (incl. ryokan)',
     schedule: [
-      { time: '09:00', emoji: '🍙', text: 'Relaxed breakfast — you earned it after bicycle day!' },
+      { time: '05:30', emoji: '💪', text: 'PUSH: Push-ups (wide) 4×15, diamond push-ups 3×12, pike push-ups 3×10, chair dips 3×12, plank 3×45s, bicycle crunches 3×20, mountain climbers 3×30s' },
+      { time: '06:00', emoji: '🚿', text: 'Shower → relaxed breakfast — you earned it after bike day!' },
       { time: '10:00', emoji: '🏛️', text: 'Kyoto National Museum — ¥700. Excellent Japanese art, ceramics, samurai armor' },
       { time: '12:00', emoji: '⛩️', text: 'Sanjusangen-do — 1,001 life-size golden Kannon statues in a row. MIND-BLOWING. ¥600' },
       { time: '13:00', emoji: '🍜', text: 'Lunch near Kyoto Station — try katsu curry or udon set' },
@@ -163,7 +167,9 @@ const days = [
     summary: 'Bowing deer, world\'s largest wooden building, ancient shrines with stone lanterns.',
     dayCost: '¥4,000-6,000',
     schedule: [
-      { time: '07:30', emoji: '📦', text: 'Check out ryokan (keep bags at Kyoto Station coin lockers ¥400-700 or hotel)' },
+      { time: '05:00', emoji: '🏃', text: '5AM RUN: Last Kamogawa River run (5km easy). Farewell Kyoto morning 🌅' },
+      { time: '05:40', emoji: '🚿', text: 'Shower → pack up' },
+      { time: '07:30', emoji: '📦', text: 'Check out ryokan (keep bags at Kyoto Station coin lockers ¥400-700)' },
       { time: '08:00', emoji: '🍙', text: 'Breakfast at konbini' },
       { time: '08:30', emoji: '🚃', text: 'JR Nara Line: Kyoto → Nara (45 min, ¥720, covered by JR Pass!)' },
       { time: '09:15', emoji: '🦌', text: 'Nara Park — FREE! Hundreds of wild deer roaming freely' },
@@ -196,7 +202,9 @@ const days = [
     summary: 'The magical Monet\'s Pond, Japan\'s sword-making city, mountain castle panorama, Osu card shops.',
     dayCost: '¥5,000-8,000',
     schedule: [
-      { time: '07:00', emoji: '⏰', text: 'Early start! Free breakfast at Toyoko Inn' },
+      { time: '05:00', emoji: '🏃', text: '5AM RUN: Nagoya Castle + Meijo Park Loop (4-6km). Castle lit up at dawn, park running track.' },
+      { time: '05:40', emoji: '🦾', text: 'PULL: Doorframe rows 4×12, superman holds 3×30s, backpack curls 3×15, plank shoulder taps 3×20' },
+      { time: '06:10', emoji: '🚿', text: 'Shower → free Toyoko Inn breakfast' },
       { time: '07:30', emoji: '🚃', text: 'JR: Nagoya → Gifu (20 min, ¥480, JR Pass!)' },
       { time: '08:00', emoji: '🚃', text: 'Nagaragawa Railway: Gifu → Seki (40 min, ¥700) — scenic countryside railway! Rice paddies, mountains, rural Japan.' },
       { time: '09:00', emoji: '🚶', text: 'Walk or taxi to Monet\'s Pond (15 min from station)' },
@@ -229,7 +237,9 @@ const days = [
     summary: 'Scenic alpine train, morning market, Edo old town, Hida beef sushi, free sake tasting, forest walk.',
     dayCost: '¥8,000-12,000',
     schedule: [
-      { time: '07:00', emoji: '🍙', text: 'Free breakfast at Toyoko Inn, check out' },
+      { time: '05:00', emoji: '🏃', text: '5AM RUN: Nagoya Castle loop (4km easy) — last morning in Nagoya' },
+      { time: '05:30', emoji: '🦵', text: 'LEGS: Squats 4×20, jump squats 3×10, Bulgarian splits 3×12 each, calf raises 4×20' },
+      { time: '06:00', emoji: '🚿', text: 'Shower → free Toyoko Inn breakfast → check out' },
       { time: '07:30', emoji: '🚃', text: 'JR Hida Limited Express: Nagoya → Takayama (2h 20min, ¥6,140 or JR Pass)' },
       { time: '07:35', emoji: '🪟', text: '⚠️ WINDOW SEAT LEFT SIDE! Stunning mountain gorge views the entire way. The train ride is an attraction itself.' },
       { time: '10:00', emoji: '🏙️', text: 'Arrive Takayama — small, walkable mountain town' },
@@ -261,6 +271,7 @@ const days = [
     summary: 'Morning cycling through rice paddies with mountain backdrop, afternoon UNESCO World Heritage village.',
     dayCost: '¥7,000-10,000',
     schedule: [
+      { time: '06:30', emoji: '🚲', text: '🟢 CYCLING DAY = cardio + legs. No extra workout needed!' },
       { time: '07:00', emoji: '🍙', text: 'Breakfast at guesthouse or konbini' },
       { time: '07:30', emoji: '🚲', text: 'Rent bicycle from station area (¥800-1,000/day) — flat terrain, easy riding' },
       { time: '08:00', emoji: '🚲', text: 'Ride along Miyagawa River path — flat, easy, stunning mountain backdrop everywhere' },
@@ -294,7 +305,8 @@ const days = [
     summary: 'Scenic train through Japanese Alps, transfer in Nagoya, arrive Hakone for onsen and nature.',
     dayCost: '¥8,000-12,000 (mostly transport)',
     schedule: [
-      { time: '07:00', emoji: '🍙', text: 'Breakfast, check out' },
+      { time: '05:00', emoji: '🏃', text: '5AM RUN: Miyagawa River farewell run (3-5km easy). Mountain silhouettes at dawn. Best run of the trip.' },
+      { time: '05:40', emoji: '🚿', text: 'Shower → pack → breakfast → check out' },
       { time: '08:00', emoji: '🚃', text: 'JR Hida Express: Takayama → Nagoya (2h 20min, JR Pass)' },
       { time: '10:30', emoji: '🚄', text: 'Shinkansen: Nagoya → Odawara (1h 45min, JR Pass)' },
       { time: '12:15', emoji: '🍜', text: 'Quick lunch at Odawara Station' },
@@ -322,7 +334,8 @@ const days = [
     summary: 'Mountain train, ropeway over volcanic valley, pirate ship on lake, Hakone Shrine, onsen.',
     dayCost: '¥3,000-5,000 (Free Pass covers transport!)',
     schedule: [
-      { time: '07:00', emoji: '🍙', text: 'Breakfast at guesthouse' },
+      { time: '05:30', emoji: '💪', text: 'PUSH: Push-ups 4×15, diamond push-ups 3×12, pike push-ups 3×10, dips 3×12, plank 3×45s, crunches 3×20' },
+      { time: '06:00', emoji: '🚿', text: 'Shower → breakfast at guesthouse' },
       { time: '08:00', emoji: '🚃', text: 'Start Hakone Loop! Hakone-Yumoto → Tozan Railway (switchback mountain train, 40 min) → Gora' },
       { time: '08:45', emoji: '🚡', text: 'Gora → Cable Car (10 min) → Sounzan' },
       { time: '09:00', emoji: '🚡', text: 'Sounzan → Ropeway → Owakudani (volcanic valley! Steam, sulfur, dramatic landscape)' },
@@ -356,7 +369,9 @@ const days = [
     summary: 'THE day. Akihabara + Nakano Broadway. Hunt for Munch Psyduck, Magikarp AR, OP manga arts. All day mission.',
     dayCost: '¥3,000-5,000 (food) + CARD BUDGET',
     schedule: [
-      { time: '07:00', emoji: '🍙', text: 'Early breakfast — fuel up for the hunt!' },
+      { time: '05:00', emoji: '🏃', text: '5AM RUN: Hakone River Valley path (3-5km, hilly). Steam from onsen vents, mountain dawn. Or skip — big travel + card day ahead.' },
+      { time: '05:40', emoji: '🦾', text: 'PULL: Doorframe rows 4×12, superman holds 3×30s, backpack curls 3×15, plank shoulder taps 3×20' },
+      { time: '06:10', emoji: '🚿', text: 'Shower → breakfast → check out' },
       { time: '07:30', emoji: '🚃', text: 'Hakone-Yumoto → Odawara → Shinkansen to Tokyo (1.5h total, JR Pass)' },
       { time: '09:00', emoji: '🏨', text: 'Drop bags at hotel near Ueno or Akihabara (coin locker if no early check-in)' },
       { time: '09:30', emoji: '📱', text: 'Open SNKR Dunk on phone — have target prices ready for comparison' },
@@ -392,7 +407,8 @@ const days = [
     summary: 'Oedo Antique Market (1st Sunday!), any remaining card shops, Ameyoko Market, farewell sushi dinner.',
     dayCost: '¥8,000-15,000',
     schedule: [
-      { time: '07:00', emoji: '🍙', text: 'Early breakfast' },
+      { time: '05:30', emoji: '🦵', text: 'LAST WORKOUT! LEGS: Squats 4×20, jump squats 3×10, Bulgarian splits 3×12, walking lunges 3×12, calf raises 4×20. Go hard! 💪' },
+      { time: '06:00', emoji: '🚿', text: 'Shower → breakfast' },
       { time: '08:00', emoji: '🚃', text: 'Head to Tokyo International Forum (Yurakucho Station)' },
       { time: '09:00', emoji: '🛍️', text: '✨ Oedo Antique Market — Japan\'s largest outdoor antique market! 1st & 3rd Sunday = today! ~250 vendors.' },
       { time: '09:30', emoji: '🏺', text: 'Browse: vintage kimono, ceramics, old woodblock prints, antique toys, retro cameras, military items' },
@@ -553,32 +569,6 @@ export default function Itinerary() {
                           </div>
                         ))}
                       </div>
-
-                      {/* Fitness box */}
-                      {day.fitness && (
-                        <div className={`mt-4 rounded-xl p-3 border ${
-                          day.fitness.type === 'rest' ? 'bg-gray-50 border-gray-200' :
-                          day.fitness.type.includes('run') ? 'bg-blue-50 border-blue-200' :
-                          day.fitness.type.includes('bike') ? 'bg-emerald-50 border-emerald-200' :
-                          'bg-orange-50 border-orange-200'
-                        }`}>
-                          <p className={`text-xs font-semibold mb-1 ${
-                            day.fitness.type === 'rest' ? 'text-gray-700' :
-                            day.fitness.type.includes('run') ? 'text-blue-800' :
-                            day.fitness.type.includes('bike') ? 'text-emerald-800' :
-                            'text-orange-800'
-                          }`}>🏋️ Workout: {day.fitness.label}</p>
-                          <p className={`text-xs ${
-                            day.fitness.type === 'rest' ? 'text-gray-600' :
-                            day.fitness.type.includes('run') ? 'text-blue-700' :
-                            day.fitness.type.includes('bike') ? 'text-emerald-700' :
-                            'text-orange-700'
-                          }`}>{day.fitness.detail}</p>
-                          {day.fitness.run && (
-                            <p className="text-xs text-blue-600 mt-1 font-semibold">🏃 Run: {day.fitness.run}</p>
-                          )}
-                        </div>
-                      )}
 
                       {day.tips.length > 0 && (
                         <div className="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3">
