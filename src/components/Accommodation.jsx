@@ -5,10 +5,13 @@ const cities = [
     nights: '5 nights (Apr 21-25) + 2 nights (May 3-4)',
     area: 'Shinjuku or Asakusa',
     options: [
-      { type: 'Budget', name: 'Hostel/Capsule Hotel', price: '¥4,000-6,000/night', idr: 'Rp 400-600K', note: 'Great social vibe, clean, lockers for belongings' },
-      { type: 'Mid', name: 'Business Hotel (APA, Toyoko Inn)', price: '¥8,000-12,000/night', idr: 'Rp 800K-1.2M', note: 'Private room, bathroom, breakfast often included' },
+      { type: 'Budget', name: '🏨 Khaosan World Asakusa', price: '¥3,500-5,000/night', idr: 'Rp 350-500K', note: 'Top-rated hostel near Senso-ji. Private rooms available for couples. Free WiFi, clean, great location.' },
+      { type: 'Budget', name: '💊 Nine Hours Shinjuku', price: '¥4,500/night per person', idr: 'Rp 450K/person', note: 'Futuristic capsule hotel — Instagram-worthy, ultra clean. Solo capsules only (no couple rooms).' },
+      { type: 'Mid', name: '🏢 APA Hotel Akihabara Station', price: '¥9,000-14,000/night', idr: 'Rp 900K-1.4M', note: 'Walking distance to card shops! Private double room, bathroom, great for card hunting base.' },
+      { type: 'Mid', name: '🏢 Toyoko Inn Shinjuku', price: '¥8,000-12,000/night', idr: 'Rp 800K-1.2M', note: 'Free breakfast, reliable chain. Book via Toyoko Inn app for member discount (10-20% off).' },
     ],
-    tip: '⚠️ Book early! Golden Week (Apr 29-May 5) makes prices spike 2-3x',
+    tip: '⚠️ Golden Week (Apr 29-May 5) = prices 2-3x normal. Book NOW on Booking.com or Agoda. Cancel free later.',
+    recommended: '💡 Best combo: APA Akihabara (card hunting days) + Khaosan Asakusa (sightseeing days)',
   },
   {
     city: 'Kyoto',
@@ -16,20 +19,24 @@ const cities = [
     nights: '4 nights (Apr 26-29)',
     area: 'Near Kyoto Station or Gion',
     options: [
-      { type: 'Budget', name: 'Guesthouse/Hostel', price: '¥4,000-6,000/night', idr: 'Rp 400-600K', note: 'Many traditional-style guesthouses available' },
-      { type: 'Special', name: 'Traditional Ryokan (1 night)', price: '¥15,000-25,000/night', idr: 'Rp 1.5-2.5M', note: '🌟 Tatami rooms, futon beds, onsen bath, kaiseki dinner — DO THIS at least once!' },
+      { type: 'Budget', name: '🏨 Piece Hostel Kyoto', price: '¥4,000-6,000/night', idr: 'Rp 400-600K', note: 'Modern design hostel near Kyoto Station. Has private double rooms for couples. Rooftop terrace.' },
+      { type: 'Budget', name: '🏨 The Millennials Kyoto', price: '¥5,000-7,000/night', idr: 'Rp 500-700K', note: 'Smart pod hotel — futuristic but comfy. Good for 1-2 nights variety.' },
+      { type: 'Special', name: '🏯 Ryokan Shimizu (1 night!)', price: '¥18,000-28,000/night', idr: 'Rp 1.8-2.8M', note: '🌟 Traditional ryokan near Gion. Tatami rooms, futon beds, shared onsen. MUST DO for 1 night. Book on Rakuten Travel for best ryokan deals.' },
     ],
-    tip: '💡 Stay 1 night in a ryokan for the authentic experience, hostel for the rest',
+    tip: '💡 Stay 3 nights hostel + 1 night ryokan. The ryokan night is an experience, not just a hotel.',
+    recommended: '💡 Piece Hostel (3 nights) + any Gion ryokan (1 night) = perfect balance',
   },
   {
     city: 'Nagoya',
     emoji: '🏯',
     nights: '2 nights (May 1-2)',
-    area: 'Near Nagoya Station',
+    area: 'Near Nagoya Station or Osu',
     options: [
-      { type: 'Budget', name: 'Business Hotel', price: '¥5,000-8,000/night', idr: 'Rp 500-800K', note: 'Nagoya is cheaper than Tokyo/Kyoto for hotels' },
+      { type: 'Budget', name: '🏢 Toyoko Inn Nagoya Station', price: '¥6,000-9,000/night', idr: 'Rp 600-900K', note: 'Nagoya is cheaper than Tokyo/Kyoto. Free breakfast. Walk to Osu card shops.' },
+      { type: 'Budget', name: '🏨 Hostel Nagonoya', price: '¥3,500-5,000/night', idr: 'Rp 350-500K', note: 'Social hostel in Osu district — near shopping and local food scene.' },
     ],
-    tip: '💡 If skipping Nagoya, use these nights for Nara day trip + extra Osaka from Kyoto',
+    tip: '💡 If skipping Nagoya: do Nara day trip + Osaka day trip from Kyoto instead. Save 2 nights hotel.',
+    recommended: '💡 Nagoya is optional but Osu district has great card shops + cheap food + less tourist crowds',
   },
 ]
 
@@ -73,7 +80,8 @@ export default function Accommodation() {
                 ))}
               </div>
 
-              <p className="text-sm text-dark-light bg-cream/30 rounded-xl px-4 py-2">{city.tip}</p>
+              <p className="text-sm text-dark-light bg-cream/30 rounded-xl px-4 py-2 mb-2">{city.tip}</p>
+              {city.recommended && <p className="text-sm font-semibold text-sakura-dark bg-sakura/5 rounded-xl px-4 py-2">{city.recommended}</p>}
             </div>
           ))}
         </div>

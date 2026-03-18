@@ -27,7 +27,7 @@ export default function Hero() {
             14 days exploring Tokyo, Kyoto, and beyond — card hunting, temple hopping, and endless ramen
           </p>
           <p className="text-white/60 font-heading text-base mb-10">
-            日本の冒険 — ゼクソとケイコの旅
+            日本の冒険 — 14 Days of Adventure
           </p>
           <a
             href="#overview"
