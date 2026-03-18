@@ -2,7 +2,7 @@ const cities = [
   {
     city: 'Kyoto',
     emoji: '⛩️',
-    nights: '4 nights hostel + 1 night ryokan (Apr 21-25)',
+    nights: '5 nights hostel (Apr 21-25)',
     area: 'Near Kyoto Station or Gion',
     order: 1,
     options: [
@@ -22,17 +22,9 @@ const cities = [
           { label: 'Booking', url: 'https://www.booking.com/search.html?ss=The+Millennials+Kyoto&checkin=2026-04-21&checkout=2026-04-25&group_adults=2' },
         ],
       },
-      {
-        type: 'Special', name: '🏯 Ryokan in Gion (1 night!)', price: '¥18,000-25,000/night', idr: 'Rp 1.8-2.5M',
-        note: '🌟 Traditional ryokan. Tatami rooms, futon beds, onsen, kaiseki dinner. MUST DO at least once.',
-        bookLinks: [
-          { label: 'Rakuten Travel', url: 'https://travel.rakuten.com/search/?checkin=2026-04-25&checkout=2026-04-26&rooms=1&adults=2&keyword=ryokan+gion+kyoto' },
-          { label: 'Jalan.net', url: 'https://www.jalan.net/en/japan_hotels_ryokan/Kyoto/' },
-        ],
-      },
     ],
-    tip: '💡 Stay 4 nights hostel + 1 night ryokan (Day 5). The ryokan is an experience, not just a hotel.',
-    recommended: '💡 Piece Hostel (4 nights) + any Gion ryokan (Apr 25) = perfect balance of budget & experience',
+    tip: '💡 Same hostel all 5 nights = no checkout hassle. Ryokan moved to Takayama (cheaper + mountain onsen!).',
+    recommended: '💡 Piece Hostel for all 5 nights — simple, no luggage shuffling',
   },
   {
     city: 'Nagoya',
@@ -64,29 +56,30 @@ const cities = [
   {
     city: 'Takayama',
     emoji: '🌲',
-    nights: '2 nights (Apr 28-29)',
+    nights: '1 night ryokan (Apr 28) + 1 night guesthouse (Apr 29)',
     area: 'Near Takayama Station',
     order: 3,
     options: [
       {
-        type: 'Budget', name: '🏨 Takayama Guesthouse Tomaru', price: '¥3,500-5,000/night', idr: 'Rp 350-500K',
-        note: 'Traditional-style guesthouse with tatami rooms. Walk to old town and morning market.',
+        type: 'Special', name: '🏯 Takayama Ryokan (Night 1!)', price: '¥15,000-20,000/night', idr: 'Rp 1.5-2M',
+        note: '🌟 THE ryokan night of the trip! Mountain onsen, kaiseki with Hida beef, tatami + futon. Cheaper than Kyoto ryokan!',
         bookLinks: [
-          { label: 'Agoda', url: 'https://www.agoda.com/search?city=4955&checkIn=2026-04-28&checkOut=2026-04-30&rooms=1&adults=2&searchText=Tomaru%20Takayama' },
-          { label: 'Booking', url: 'https://www.booking.com/search.html?ss=Guesthouse+Tomaru+Takayama&checkin=2026-04-28&checkout=2026-04-30&group_adults=2' },
+          { label: 'Rakuten Travel', url: 'https://travel.rakuten.com/search/?checkin=2026-04-28&checkout=2026-04-29&rooms=1&adults=2&keyword=ryokan+takayama' },
+          { label: 'Jalan.net', url: 'https://www.jalan.net/en/japan_hotels_ryokan/Takayama/' },
+          { label: 'Agoda', url: 'https://www.agoda.com/search?city=4955&checkIn=2026-04-28&checkOut=2026-04-29&rooms=1&adults=2&searchText=ryokan%20takayama' },
         ],
       },
       {
-        type: 'Budget', name: '🏨 K\'s House Takayama', price: '¥4,000-6,000/night', idr: 'Rp 400-600K',
-        note: 'Popular hostel chain. Private rooms, common kitchen, bike rental help. Great vibes.',
+        type: 'Budget', name: '🏨 K\'s House Takayama (Night 2)', price: '¥4,000-6,000/night', idr: 'Rp 400-600K',
+        note: 'Night 2 after cycling/Shirakawa-go. Private rooms, common kitchen, bike rental help.',
         bookLinks: [
-          { label: 'Agoda', url: 'https://www.agoda.com/search?city=4955&checkIn=2026-04-28&checkOut=2026-04-30&rooms=1&adults=2&searchText=K%27s%20House%20Takayama' },
-          { label: 'Booking', url: 'https://www.booking.com/search.html?ss=K%27s+House+Takayama&checkin=2026-04-28&checkout=2026-04-30&group_adults=2' },
+          { label: 'Agoda', url: 'https://www.agoda.com/search?city=4955&checkIn=2026-04-29&checkOut=2026-04-30&rooms=1&adults=2&searchText=K%27s%20House%20Takayama' },
+          { label: 'Booking', url: 'https://www.booking.com/search.html?ss=K%27s+House+Takayama&checkin=2026-04-29&checkout=2026-04-30&group_adults=2' },
         ],
       },
     ],
-    tip: '💡 Takayama is Japan\'s CHEAPEST tourist city. Hotels ¥4-6K, food ¥500-1,500. Save money here!',
-    recommended: '💡 Save money here → spend savings on Hida beef instead! 🥩',
+    tip: '💡 Ryokan HERE is the smart move — ¥15-20K vs ¥25K+ in Kyoto. Mountain onsen >> city onsen. Kaiseki includes Hida beef!',
+    recommended: '💡 Night 1: Ryokan (the experience!) → Night 2: K\'s House guesthouse (budget, bike day)',
   },
   {
     city: 'Hakone',
