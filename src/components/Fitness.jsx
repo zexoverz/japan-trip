@@ -125,7 +125,7 @@ export default function Fitness() {
           <p className="text-emerald-600 font-heading font-semibold text-sm tracking-widest uppercase mb-3">🏋️ トレーニング — Stay Fit</p>
           <h2 className="text-4xl sm:text-5xl font-heading font-bold text-dark mb-4">Workout Plan</h2>
           <p className="text-dark-light max-w-2xl mx-auto text-lg">
-            No gym needed. 5AM runs + bodyweight workouts in your hotel room. Maintain muscle, keep the basketball explosiveness.
+            No gym needed. Everything packed into one 5AM morning block: run → bodyweight workout → shower → day starts free. Maintain muscle, keep the basketball explosiveness.
           </p>
         </div>
 
@@ -162,7 +162,7 @@ export default function Fitness() {
             ))}
           </div>
           <p className="text-xs text-dark-light mt-3 text-center">
-            🏃 = 5AM run (3-8km) | 💪🦾🦵 = bodyweight workout (20-30 min in room) | 🚲 = cycling day counts as cardio+legs
+            🏃 = 5AM run (3-8km) → 💪🦾🦵 bodyweight (20-30 min) → shower by 6:15 → day free! | 🚲 = cycling = cardio+legs
           </p>
         </div>
 
