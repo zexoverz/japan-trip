@@ -6,6 +6,7 @@ const days = [
     city: 'Tokyo → Kyoto', cityColor: 'bg-orange-100 text-orange-600',
     theme: 'Arrival & Travel',
     isBicycleDay: false,
+    fitness: { type: 'rest', label: '😴 REST DAY', detail: 'Travel day + jetlag. Sleep early, recover for tomorrow.' },
     image: 'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600&q=75',
     summary: 'Land at Narita, activate JR Pass, Shinkansen straight to Kyoto. No time to waste in Tokyo!',
     dayCost: '¥5,000-8,000 (food + IC card)',
@@ -30,6 +31,7 @@ const days = [
     city: 'Kyoto', cityColor: 'bg-orange-100 text-orange-600',
     theme: 'Iconic Kyoto',
     isBicycleDay: false,
+    fitness: { type: 'run+push', label: '🏃 5AM Run + 💪 Push', detail: '5AM: Kamogawa River Path (5-8km). Evening: Push workout in room — push-ups, diamond push-ups, pike push-ups, dips, plank, crunches.', run: 'Kamogawa River Path, 5-8km' },
     image: 'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600&q=75',
     summary: 'Thousand torii gates at dawn, Kyoto\'s Kitchen for street food, Gion geisha district at dusk.',
     dayCost: '¥4,000-6,000',
@@ -63,6 +65,7 @@ const days = [
     city: 'Kyoto', cityColor: 'bg-orange-100 text-orange-600',
     theme: 'Bamboo & Mountains',
     isBicycleDay: false,
+    fitness: { type: 'legs', label: '🦵 Legs + Explosive', detail: 'Morning before breakfast: Squats, Bulgarian split squats, jump squats, walking lunges, calf raises, glute bridges. Box jumps at park bench during Arashiyama walk.' },
     image: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=75',
     summary: 'Bamboo Grove at dawn, monkey park, iconic bridge, scenic mountain train, Pontocho dinner.',
     dayCost: '¥5,000-8,000',
@@ -92,6 +95,7 @@ const days = [
     city: 'Kyoto', cityColor: 'bg-orange-100 text-orange-600',
     theme: '🚲 Bicycle Day',
     isBicycleDay: true,
+    fitness: { type: 'bike+pull', label: '🚲 Cycling (cardio) + 🦾 Pull', detail: '20km cycling = cardio+legs done! Evening in room: Doorframe rows, superman holds, backpack curls, plank shoulder taps.' },
     image: 'https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=600&q=75',
     summary: '6+ major temples by bike in one day! Golden Pavilion, zen gardens, Philosopher\'s Path, Kiyomizu-dera. 20km flat ride.',
     dayCost: '¥5,000-7,000',
@@ -126,6 +130,7 @@ const days = [
     city: 'Kyoto', cityColor: 'bg-orange-100 text-orange-600',
     theme: 'Culture & Tradition',
     isBicycleDay: false,
+    fitness: { type: 'push', label: '💪 Push Day', detail: 'Morning in room: Push-ups (wide), diamond push-ups, pike push-ups, chair dips, plank, bicycle crunches, mountain climbers.' },
     image: 'https://images.unsplash.com/photo-1524413840807-0c3cb6fa808d?w=600&q=75',
     summary: '1,001 golden statues, manga museum paradise, then special ryokan night with kaiseki dinner.',
     dayCost: '¥20,000-28,000 (incl. ryokan)',
@@ -153,6 +158,7 @@ const days = [
     city: 'Kyoto → Nara', cityColor: 'bg-orange-100 text-orange-600',
     theme: '🦌 Deer & Giant Buddha',
     isBicycleDay: false,
+    fitness: { type: 'run', label: '🏃 5AM Run', detail: '5AM: Last Kamogawa River run (5km). Travel day after — running only, no weights. Lots of walking in Nara (15K+ steps).', run: 'Kamogawa River Path, 5km' },
     image: 'https://images.unsplash.com/photo-1526481280693-3bfa7568e0f8?w=600&q=75',
     summary: 'Bowing deer, world\'s largest wooden building, ancient shrines with stone lanterns.',
     dayCost: '¥4,000-6,000',
@@ -185,6 +191,7 @@ const days = [
     city: 'Nagoya/Gifu', cityColor: 'bg-purple-100 text-purple-600',
     theme: '🎨 Hidden Gem Day',
     isBicycleDay: false,
+    fitness: { type: 'pull', label: '🦾 Pull Day', detail: 'Evening in room: Doorframe rows, superman holds, reverse snow angels, backpack curls, plank shoulder taps, dead bugs.', run: 'Nagoya Castle loop in morning if energy (4-6km)' },
     image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=75',
     summary: 'The magical Monet\'s Pond, Japan\'s sword-making city, mountain castle panorama, Osu card shops.',
     dayCost: '¥5,000-8,000',
@@ -217,6 +224,7 @@ const days = [
     city: 'Takayama', cityColor: 'bg-emerald-100 text-emerald-700',
     theme: '🏔️ Alps Countryside',
     isBicycleDay: false,
+    fitness: { type: 'run+legs', label: '🏃 5AM Run + 🦵 Legs', detail: '5AM: Miyagawa River + Higashiyama Trail (5-7km, THE most scenic run!). Evening: Squats, jump squats, Bulgarian splits, calf raises.', run: 'Miyagawa River → Higashiyama Trail, 5-7km' },
     image: 'https://images.unsplash.com/photo-1480796927426-f609979314bd?w=600&q=75',
     summary: 'Scenic alpine train, morning market, Edo old town, Hida beef sushi, free sake tasting, forest walk.',
     dayCost: '¥8,000-12,000',
@@ -248,6 +256,7 @@ const days = [
     city: 'Takayama', cityColor: 'bg-emerald-100 text-emerald-700',
     theme: '🚲 Bicycle Day',
     isBicycleDay: true,
+    fitness: { type: 'bike', label: '🚲 Cycling Day (cardio + legs)', detail: 'Cycling AM + Shirakawa-go walking PM = full body active day. No extra workout needed. REST upper body.' },
     image: 'https://images.unsplash.com/photo-1528164344705-47542687000d?w=600&q=75',
     summary: 'Morning cycling through rice paddies with mountain backdrop, afternoon UNESCO World Heritage village.',
     dayCost: '¥7,000-10,000',
@@ -280,6 +289,7 @@ const days = [
     city: 'Takayama → Hakone', cityColor: 'bg-green-100 text-green-700',
     theme: 'Travel + Onsen Evening',
     isBicycleDay: false,
+    fitness: { type: 'run', label: '🏃 5AM Run (farewell Takayama!)', detail: '5AM: Last Miyagawa River run (3-5km easy pace). Travel day after — keep it light. Onsen recovery in evening!', run: 'Miyagawa River, 3-5km easy' },
     image: 'https://images.unsplash.com/photo-1528164344705-47542687000d?w=600&q=75',
     summary: 'Scenic train through Japanese Alps, transfer in Nagoya, arrive Hakone for onsen and nature.',
     dayCost: '¥8,000-12,000 (mostly transport)',
@@ -307,6 +317,7 @@ const days = [
     city: 'Hakone', cityColor: 'bg-green-100 text-green-700',
     theme: '🗻 Nature & Views',
     isBicycleDay: false,
+    fitness: { type: 'push', label: '💪 Push Day', detail: 'Morning in room: Push-ups, diamond push-ups, pike push-ups, dips, plank, crunches. Full Hakone loop = lots of walking + hiking.', run: 'Hakone River Valley (optional 3-5km if legs fresh)' },
     image: 'https://images.unsplash.com/photo-1528164344705-47542687000d?w=600&q=75',
     summary: 'Mountain train, ropeway over volcanic valley, pirate ship on lake, Hakone Shrine, onsen.',
     dayCost: '¥3,000-5,000 (Free Pass covers transport!)',
@@ -340,6 +351,7 @@ const days = [
     city: 'Tokyo', cityColor: 'bg-sky/20 text-sky',
     theme: '🃏 THE Card Hunt',
     isBicycleDay: false,
+    fitness: { type: 'run+pull', label: '🏃 5AM Run + 🦾 Pull', detail: '5AM: Imperial Palace Loop (5km) — THE most famous run in Japan! Evening: Pull workout in room after card hunting.', run: 'Imperial Palace Loop, 5km' },
     image: 'https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&q=75',
     summary: 'THE day. Akihabara + Nakano Broadway. Hunt for Munch Psyduck, Magikarp AR, OP manga arts. All day mission.',
     dayCost: '¥3,000-5,000 (food) + CARD BUDGET',
@@ -375,6 +387,7 @@ const days = [
     city: 'Tokyo', cityColor: 'bg-sky/20 text-sky',
     theme: '🛍️ Flea Market Day',
     isBicycleDay: false,
+    fitness: { type: 'legs', label: '🦵 Legs (last workout!)', detail: 'Morning: Squats, jump squats, Bulgarian splits, walking lunges, calf raises. Last workout of the trip — go hard! 20K+ walking steps today.' },
     image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=75',
     summary: 'Oedo Antique Market (1st Sunday!), any remaining card shops, Ameyoko Market, farewell sushi dinner.',
     dayCost: '¥8,000-15,000',
@@ -405,6 +418,7 @@ const days = [
     city: 'Tokyo', cityColor: 'bg-sky/20 text-sky',
     theme: '✈️ Departure',
     isBicycleDay: false,
+    fitness: { type: 'rest', label: '😴 REST DAY', detail: 'Travel day. You earned it. 14 days of training done. Go home strong 💪' },
     image: 'https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600&q=75',
     summary: 'Final konbini run for plane snacks, head to airport, duty-free matcha, fly home with memories.',
     dayCost: '¥3,000-5,000',
@@ -486,6 +500,16 @@ export default function Itinerary() {
                         🚲 Bicycle Day
                       </span>
                     )}
+                    {day.fitness && (
+                      <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${
+                        day.fitness.type === 'rest' ? 'bg-gray-100 text-gray-600' :
+                        day.fitness.type.includes('run') ? 'bg-blue-100 text-blue-700' :
+                        day.fitness.type.includes('bike') ? 'bg-emerald-100 text-emerald-700' :
+                        'bg-orange-100 text-orange-700'
+                      }`}>
+                        {day.fitness.label}
+                      </span>
+                    )}
                   </div>
                   <h3 className="font-heading font-bold text-dark text-base sm:text-lg truncate">{day.title}</h3>
                   <p className="text-sm text-dark-light truncate">{day.summary}</p>
@@ -529,6 +553,32 @@ export default function Itinerary() {
                           </div>
                         ))}
                       </div>
+
+                      {/* Fitness box */}
+                      {day.fitness && (
+                        <div className={`mt-4 rounded-xl p-3 border ${
+                          day.fitness.type === 'rest' ? 'bg-gray-50 border-gray-200' :
+                          day.fitness.type.includes('run') ? 'bg-blue-50 border-blue-200' :
+                          day.fitness.type.includes('bike') ? 'bg-emerald-50 border-emerald-200' :
+                          'bg-orange-50 border-orange-200'
+                        }`}>
+                          <p className={`text-xs font-semibold mb-1 ${
+                            day.fitness.type === 'rest' ? 'text-gray-700' :
+                            day.fitness.type.includes('run') ? 'text-blue-800' :
+                            day.fitness.type.includes('bike') ? 'text-emerald-800' :
+                            'text-orange-800'
+                          }`}>🏋️ Workout: {day.fitness.label}</p>
+                          <p className={`text-xs ${
+                            day.fitness.type === 'rest' ? 'text-gray-600' :
+                            day.fitness.type.includes('run') ? 'text-blue-700' :
+                            day.fitness.type.includes('bike') ? 'text-emerald-700' :
+                            'text-orange-700'
+                          }`}>{day.fitness.detail}</p>
+                          {day.fitness.run && (
+                            <p className="text-xs text-blue-600 mt-1 font-semibold">🏃 Run: {day.fitness.run}</p>
+                          )}
+                        </div>
+                      )}
 
                       {day.tips.length > 0 && (
                         <div className="mt-4 bg-amber-50 border border-amber-200 rounded-xl p-3">
