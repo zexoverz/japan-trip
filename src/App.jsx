@@ -1,0 +1,32 @@
+import { useState, useEffect } from 'react'
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Overview from './components/Overview'
+import Itinerary from './components/Itinerary'
+import Budget from './components/Budget'
+import CardHunt from './components/CardHunt'
+import Accommodation from './components/Accommodation'
+import Tips from './components/Tips'
+import PackingChecklist from './components/PackingChecklist'
+import Footer from './components/Footer'
+import SakuraPetals from './components/SakuraPetals'
+
+function App() {
+  return (
+    <div className="relative min-h-screen overflow-x-hidden">
+      <SakuraPetals />
+      <Navbar />
+      <Hero />
+      <Overview />
+      <Itinerary />
+      <Budget />
+      <CardHunt />
+      <Accommodation />
+      <Tips />
+      <PackingChecklist />
+      <Footer />
+    </div>
+  )
+}
+
+export default App

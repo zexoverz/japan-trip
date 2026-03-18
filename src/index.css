@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sakura: #FFB7C5;
+  --color-sakura-light: #FFD6E0;
+  --color-sakura-dark: #E8909F;
+  --color-sky: #87CEEB;
+  --color-sky-light: #B0E0F0;
+  --color-cream: #FFF8DC;
+  --color-cream-dark: #F5E6B8;
+  --color-dark: #2D2D2D;
+  --color-dark-light: #4A4A4A;
+  --font-heading: "Quicksand", sans-serif;
+  --font-body: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-dark);
+  background-color: #FFFAF5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Sakura falling animation */
+@keyframes sakura-fall {
+  0% {
+    transform: translateY(-10%) translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(100px) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.sakura-petal {
+  animation: sakura-fall linear forwards;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-sakura);
+  border-radius: 4px;
+}
