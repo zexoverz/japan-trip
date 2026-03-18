@@ -24,7 +24,7 @@ export default function Hero() {
           </h1>
           <p className="text-3xl sm:text-4xl mb-8">🌸</p>
           <p className="text-white/90 text-lg sm:text-xl font-heading max-w-2xl mx-auto mb-8">
-            14 days exploring Tokyo, Kyoto, and beyond — card hunting, temple hopping, and endless ramen
+            14 days — Kyoto first, Japanese Alps, countryside cycling, Tokyo last for card hunting & flea market
           </p>
           <p className="text-white/60 font-heading text-base mb-10">
             日本の冒険 — 14 Days of Adventure

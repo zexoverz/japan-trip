@@ -2,7 +2,7 @@ const cities = [
   {
     city: 'Tokyo',
     emoji: '🏙️',
-    nights: '3 nights (Apr 21-23) + 1 night (May 3)',
+    nights: '2 nights (May 2-3)',
     area: 'Akihabara or Ueno',
     options: [
       { type: 'Budget', name: '🏨 Khaosan World Asakusa', price: '¥3,500-5,000/night', idr: 'Rp 350-500K', note: 'Top-rated hostel near Senso-ji. Private rooms available for couples. Free WiFi, clean, great location.' },
@@ -10,12 +10,12 @@ const cities = [
       { type: 'Mid', name: '🏢 Toyoko Inn Ueno', price: '¥8,000-12,000/night', idr: 'Rp 800K-1.2M', note: 'Free breakfast, near Ameyoko Market. Good for last night before departure.' },
     ],
     tip: '⚠️ Golden Week (Apr 29-May 5) = prices 2-3x normal. Book NOW. Last night (May 3) especially.',
-    recommended: '💡 APA Akihabara for card hunting days (Days 1-3), Toyoko Inn Ueno for last night (Day 13)',
+    recommended: '💡 APA Akihabara for card hunting day (May 2), Toyoko Inn Ueno for last night (May 3)',
   },
   {
     city: 'Hakone',
     emoji: '🏔️',
-    nights: '1 night (Apr 23)',
+    nights: '2 nights (Apr 30 - May 1)',
     area: 'Hakone-Yumoto',
     options: [
       { type: 'Budget', name: '🏨 Hakone Tent Guesthouse', price: '¥4,000-6,000/night', idr: 'Rp 400-600K', note: 'Cozy guesthouse near Hakone-Yumoto station. Shared kitchen, friendly staff, mountain atmosphere.' },
@@ -27,7 +27,7 @@ const cities = [
   {
     city: 'Kyoto',
     emoji: '⛩️',
-    nights: '3 nights hostel + 1 night ryokan (Apr 25-28)',
+    nights: '4 nights hostel + 1 night ryokan (Apr 21-25)',
     area: 'Near Kyoto Station or Gion',
     options: [
       { type: 'Budget', name: '🏨 Piece Hostel Kyoto', price: '¥4,000-6,000/night', idr: 'Rp 400-600K', note: 'Modern design hostel near Kyoto Station. Private double rooms for couples. Rooftop terrace.' },
@@ -40,7 +40,7 @@ const cities = [
   {
     city: 'Nagoya',
     emoji: '🏯',
-    nights: '2 nights (Apr 29-30)',
+    nights: '2 nights (Apr 26-27)',
     area: 'Near Nagoya Station',
     options: [
       { type: 'Budget', name: '🏢 Toyoko Inn Nagoya Station', price: '¥6,000-9,000/night', idr: 'Rp 600-900K', note: 'Free breakfast, reliable chain. Walk to Osu card shops and Gifu trains.' },
@@ -52,7 +52,7 @@ const cities = [
   {
     city: 'Takayama',
     emoji: '🌲',
-    nights: '2 nights (May 1-2)',
+    nights: '2 nights (Apr 28-29)',
     area: 'Near Takayama Station',
     options: [
       { type: 'Budget', name: '🏨 Takayama Guesthouse Tomaru', price: '¥3,500-5,000/night', idr: 'Rp 350-500K', note: 'Traditional-style guesthouse with tatami rooms. Walking distance to old town and morning market.' },

@@ -15,7 +15,7 @@ export default function Overview() {
           <p className="text-sakura font-heading font-semibold text-sm tracking-widest uppercase mb-3">旅の概要 — Trip Overview</p>
           <h2 className="text-4xl sm:text-5xl font-heading font-bold text-dark mb-4">The Adventure at a Glance</h2>
           <p className="text-dark-light max-w-2xl mx-auto text-lg">
-            Two weeks across Japan with Keiko — from the neon of Akihabara to bamboo groves, alpine villages, and countryside cycling.
+            Two weeks across Japan — Kyoto first, countryside middle, Tokyo last for card hunting & flea market.
           </p>
         </div>
 
@@ -39,14 +39,13 @@ export default function Overview() {
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-sm sm:text-base">
             {[
               { city: '🛬 Narita', days: 'Apr 21' },
-              { city: '🏙️ Tokyo', days: 'Days 1-3' },
-              { city: '🏔️ Hakone', days: 'Days 3-4' },
               { city: '🚄 Shinkansen', days: '' },
-              { city: '⛩️ Kyoto', days: 'Days 5-8' },
-              { city: '🦌 Nara', days: 'Day 9' },
-              { city: '🏯 Nagoya/Gifu', days: 'Days 9-10' },
-              { city: '🌲 Takayama', days: 'Days 11-12' },
-              { city: '🏙️ Tokyo', days: 'Days 13-14' },
+              { city: '⛩️ Kyoto', days: 'Days 1-5' },
+              { city: '🦌 Nara', days: 'Day 6' },
+              { city: '🏯 Nagoya/Gifu', days: 'Days 6-7' },
+              { city: '🌲 Takayama', days: 'Days 8-9' },
+              { city: '🏔️ Hakone', days: 'Days 10-11' },
+              { city: '🏙️ Tokyo', days: 'Days 12-13' },
               { city: '🛫 Departure', days: 'May 4' },
             ].map((stop, i, arr) => (
               <div key={i} className="flex items-center gap-3">
