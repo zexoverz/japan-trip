@@ -92,36 +92,36 @@ const cities = [
   {
     city: 'Tokyo',
     emoji: '🏙️',
-    nights: '3 nights (May 2-4)',
+    nights: '3 nights (May 1-4)',
     area: 'Akihabara or Ueno',
     order: 4,
     options: [
       {
         type: 'Mid', name: '🏢 APA Hotel Akihabara Station', price: '¥9,000-14,000/night', idr: 'Rp 900K-1.4M',
-        note: 'Walking distance to ALL card shops! Private double room. Perfect base for card hunting.',
+        note: 'Walking distance to ALL card shops! Private double room. Perfect base for card hunting Day 12.',
         bookLinks: [
-          { label: 'Agoda', url: 'https://www.agoda.com/search?city=14125&checkIn=2026-05-02&checkOut=2026-05-04&rooms=1&adults=2&searchText=akihabara' },
-          { label: 'Booking', url: 'https://www.booking.com/search.html?ss=Akihabara%2C+Tokyo&checkin=2026-05-02&checkout=2026-05-04&group_adults=2' },
+          { label: 'Agoda', url: 'https://www.agoda.com/search?city=14125&checkIn=2026-05-01&checkOut=2026-05-04&rooms=1&adults=2&searchText=akihabara' },
+          { label: 'Booking', url: 'https://www.booking.com/search.html?ss=Akihabara%2C+Tokyo&checkin=2026-05-01&checkout=2026-05-04&group_adults=2' },
         ],
       },
       {
         type: 'Budget', name: '🏢 Toyoko Inn Ueno', price: '¥8,000-12,000/night', idr: 'Rp 800K-1.2M',
         note: 'Free breakfast, near Ameyoko Market + Ueno Station (easy airport access on departure day).',
         bookLinks: [
-          { label: 'Agoda', url: 'https://www.agoda.com/search?city=14125&checkIn=2026-05-02&checkOut=2026-05-04&rooms=1&adults=2&searchText=toyoko%20inn%20ueno' },
-          { label: 'Booking', url: 'https://www.booking.com/search.html?ss=Toyoko+Inn+Ueno&checkin=2026-05-02&checkout=2026-05-04&group_adults=2' },
+          { label: 'Agoda', url: 'https://www.agoda.com/search?city=14125&checkIn=2026-05-01&checkOut=2026-05-04&rooms=1&adults=2&searchText=toyoko%20inn%20ueno' },
+          { label: 'Booking', url: 'https://www.booking.com/search.html?ss=Toyoko+Inn+Ueno&checkin=2026-05-01&checkout=2026-05-04&group_adults=2' },
         ],
       },
       {
         type: 'Budget', name: '🏨 Khaosan World Asakusa', price: '¥3,500-5,000/night', idr: 'Rp 350-500K',
         note: 'Top-rated hostel. Private couple rooms available. Near Senso-ji. Good budget option.',
         bookLinks: [
-          { label: 'Agoda', url: 'https://www.agoda.com/search?city=14125&checkIn=2026-05-02&checkOut=2026-05-04&rooms=1&adults=2&searchText=Khaosan%20World%20Asakusa' },
-          { label: 'Booking', url: 'https://www.booking.com/search.html?ss=Khaosan+World+Asakusa&checkin=2026-05-02&checkout=2026-05-04&group_adults=2' },
+          { label: 'Agoda', url: 'https://www.agoda.com/search?city=14125&checkIn=2026-05-01&checkOut=2026-05-04&rooms=1&adults=2&searchText=Khaosan%20World%20Asakusa' },
+          { label: 'Booking', url: 'https://www.booking.com/search.html?ss=Khaosan+World+Asakusa&checkin=2026-05-01&checkout=2026-05-04&group_adults=2' },
         ],
       },
     ],
-    tip: '⚠️ May 2-4 is PEAK Golden Week. Prices 2-3x normal. BOOK NOW or you\'ll pay premium.',
+    tip: '⚠️ May 1-3 is PEAK Golden Week. Prices 2-3x normal. BOOK NOW or you\'ll pay premium.',
     recommended: '💡 APA Akihabara = walk to card shops. Worth the extra for card hunting convenience.',
   },
 ]
