@@ -2,7 +2,7 @@ const cities = [
   {
     city: 'Kyoto',
     emoji: '⛩️',
-    nights: '5 nights (Apr 21-26)',
+    nights: '4 nights (Apr 21-25)',
     area: 'Near Kyoto Station or Gion',
     order: 1,
     options: [
@@ -10,103 +10,118 @@ const cities = [
         type: 'Budget', name: '🏨 Piece Hostel Kyoto', price: '¥4,000-6,000/night', idr: 'Rp 400-600K',
         note: 'Modern design hostel near Kyoto Station. Private double rooms for couples. Rooftop terrace.',
         bookLinks: [
-          { label: 'Agoda', url: 'https://www.agoda.com/piece-hostel-kyoto/hotel/kyoto-jp.html?checkIn=2026-04-21&checkOut=2026-04-26&rooms=1&adults=2' },
-          { label: 'Booking', url: 'https://www.booking.com/hotel/jp/piece-hostel-kyoto.html?checkin=2026-04-21&checkout=2026-04-26&group_adults=2' },
-          { label: 'Hostelworld', url: 'https://www.hostelworld.com/st/hostels/p/273625/piece-hostel-kyoto/' },
+          { label: 'Agoda', url: 'https://www.agoda.com/piece-hostel-kyoto/hotel/kyoto-jp.html?checkIn=2026-04-21&checkOut=2026-04-25&rooms=1&adults=2' },
+          { label: 'Booking', url: 'https://www.booking.com/hotel/jp/piece-hostel-kyoto.html?checkin=2026-04-21&checkout=2026-04-25&group_adults=2' },
         ],
       },
       {
         type: 'Budget', name: '🏨 The Millennials Kyoto', price: '¥5,000-7,000/night', idr: 'Rp 500-700K',
         note: 'Smart pod hotel — futuristic but comfy. Individual pods with motorized beds.',
         bookLinks: [
-          { label: 'Agoda', url: 'https://www.agoda.com/search?city=72306&checkIn=2026-04-21&checkOut=2026-04-26&rooms=1&adults=2&searchText=The%20Millennials%20Kyoto' },
-          { label: 'Booking', url: 'https://www.booking.com/search.html?ss=The+Millennials+Kyoto&checkin=2026-04-21&checkout=2026-04-26&group_adults=2' },
+          { label: 'Agoda', url: 'https://www.agoda.com/search?city=72306&checkIn=2026-04-21&checkOut=2026-04-25&rooms=1&adults=2&searchText=The%20Millennials%20Kyoto' },
+          { label: 'Booking', url: 'https://www.booking.com/search.html?ss=The+Millennials+Kyoto&checkin=2026-04-21&checkout=2026-04-25&group_adults=2' },
         ],
       },
     ],
-    tip: '💡 Same hostel all 5 nights = no checkout hassle. Ryokan moved to Okuhida (mountain onsen!).',
-    recommended: '💡 Piece Hostel for all 5 nights — simple, no luggage shuffling',
+    tip: '💡 Same hostel all 4 nights = no checkout hassle. Ryokan experience moved to Gifu!',
+    recommended: '💡 Piece Hostel — simple, clean, walking distance to station. No luggage shuffling.',
+  },
+  {
+    city: 'Gifu (Nagaragawa Onsen)',
+    emoji: '🏯',
+    nights: '2 nights (Apr 26-27)',
+    area: 'Nagaragawa Onsen district (riverside) + Gifu Station area',
+    order: 2,
+    options: [
+      {
+        type: 'Special', name: '🏯 Juhachiro (十八楼)', price: '¥20,000-35,000/night w/ 2 meals', idr: 'Rp 2-3.5M',
+        note: '🌟 THE PICK. 300+ year old ryokan right on Nagara River. Outdoor rotenburo onsen, multi-course kaiseki, tatami rooms. One of Gifu\'s most historic inns. Night 1 here.',
+        bookLinks: [
+          { label: 'Official Site', url: 'https://www.18rou.com/' },
+          { label: 'Rakuten Travel', url: 'https://travel.rakuten.com/hotel/Japan-Gifu_Prefecture-Gifu-Juhachiro/69651/?checkin=2026-04-26&checkout=2026-04-27&rooms=1&adults=2' },
+          { label: 'Booking', url: 'https://www.booking.com/search.html?ss=Juhachiro+Gifu&checkin=2026-04-26&checkout=2026-04-27&group_adults=2' },
+        ],
+      },
+      {
+        type: 'Special', name: '🏯 Miyako Hotel Gifu Nagaragawa', price: '¥15,000-25,000/night', idr: 'Rp 1.5-2.5M',
+        note: '4-star hotel on Nagara River. Onsen bath, river-view rooms, 3 restaurants. More modern than Juhachiro but still has onsen. Good alternative if Juhachiro is full.',
+        bookLinks: [
+          { label: 'Booking', url: 'https://www.booking.com/hotel/jp/gifu-miyako.html?checkin=2026-04-26&checkout=2026-04-27&group_adults=2' },
+          { label: 'Agoda', url: 'https://www.agoda.com/miyako-hotel-gifu-nagaragawa/hotel/gifu-jp.html?checkIn=2026-04-26&checkOut=2026-04-27&rooms=1&adults=2' },
+        ],
+      },
+      {
+        type: 'Budget', name: '🏢 Dormy Inn Gifu Ekimae', price: '¥8,000-12,000/night', idr: 'Rp 800K-1.2M',
+        note: 'Night 2 budget option near Gifu Station. Has public onsen bath + free late-night ramen! 5 min walk to JR Gifu.',
+        bookLinks: [
+          { label: 'Booking', url: 'https://www.booking.com/hotel/jp/dormy-inn-gifu-ekimae.html?checkin=2026-04-27&checkout=2026-04-28&group_adults=2' },
+          { label: 'Agoda', url: 'https://www.agoda.com/dormy-inn-gifu-ekimae/hotel/gifu-jp.html?checkIn=2026-04-27&checkOut=2026-04-28&rooms=1&adults=2' },
+        ],
+      },
+    ],
+    tip: '💡 Night 1: Ryokan splurge (Juhachiro or Miyako) with kaiseki + onsen. Night 2: Budget hotel near station for easy Hida Express departure next morning.',
+    recommended: '💡 Juhachiro — 300 year history, riverside rotenburo, kaiseki dinner included. THE ryokan of the trip.',
   },
   {
     city: 'Takayama',
     emoji: '🌲',
-    nights: '4 nights guesthouse (Apr 26-30)',
+    nights: '4 nights (Apr 28 - May 1)',
     area: 'Near Takayama Station',
-    order: 2,
+    order: 3,
     options: [
       {
         type: 'Budget', name: '🏨 K\'s House Takayama', price: '¥4,000-6,000/night', idr: 'Rp 400-600K',
-        note: 'Top-rated guesthouse. Private rooms, common kitchen, bike rental help. Your base for Kamikochi & Shirakawa-go.',
+        note: 'Top-rated guesthouse. Private rooms, common kitchen, bike rental help. Your base for Kamikochi, Shirakawa-go, and free day.',
         bookLinks: [
-          { label: 'Agoda', url: 'https://www.agoda.com/k-s-house-takayama/hotel/takayama-jp.html?checkIn=2026-04-26&checkOut=2026-04-30&rooms=1&adults=2' },
-          { label: 'Booking', url: 'https://www.booking.com/hotel/jp/k-s-house-takayama.html?checkin=2026-04-26&checkout=2026-04-30&group_adults=2' },
+          { label: 'Agoda', url: 'https://www.agoda.com/k-s-house-takayama/hotel/takayama-jp.html?checkIn=2026-04-28&checkOut=2026-05-02&rooms=1&adults=2' },
+          { label: 'Booking', url: 'https://www.booking.com/hotel/jp/k-s-house-takayama.html?checkin=2026-04-28&checkout=2026-05-02&group_adults=2' },
         ],
       },
       {
         type: 'Budget', name: '🏨 Guesthouse Tomaru', price: '¥3,500-5,000/night', idr: 'Rp 350-500K',
         note: 'Cozy traditional guesthouse in old town. Walking distance to morning market and Sanmachi Suji.',
         bookLinks: [
-          { label: 'Agoda', url: 'https://www.agoda.com/search?city=4955&checkIn=2026-04-26&checkOut=2026-04-30&rooms=1&adults=2&searchText=guesthouse%20takayama' },
-          { label: 'Booking', url: 'https://www.booking.com/search.html?ss=guesthouse+takayama&checkin=2026-04-26&checkout=2026-04-30&group_adults=2' },
+          { label: 'Agoda', url: 'https://www.agoda.com/search?city=4955&checkIn=2026-04-28&checkOut=2026-05-02&rooms=1&adults=2&searchText=guesthouse%20takayama' },
+          { label: 'Booking', url: 'https://www.booking.com/search.html?ss=guesthouse+takayama&checkin=2026-04-28&checkout=2026-05-02&group_adults=2' },
         ],
       },
     ],
-    tip: '💡 4 nights at same guesthouse — stable base for Takayama old town, Kamikochi day trip, Shirakawa-go, and Okuhida departure.',
-    recommended: '💡 K\'s House — well-known among backpackers, great common area, walking distance to everything',
-  },
-  {
-    city: 'Okuhida Onsen',
-    emoji: '♨️',
-    nights: '1 night ryokan (Apr 30 - May 1)',
-    area: 'Okuhida Onsen Village (Hirayu/Shinhotaka)',
-    order: 3,
-    options: [
-      {
-        type: 'Special', name: '🏯 Okuhida Onsen Ryokan', price: '¥15,000-25,000/night', idr: 'Rp 1.5-2.5M',
-        note: '🌟 THE ryokan night of the trip! Mountain onsen, kaiseki dinner + breakfast included, tatami + futon. Way more authentic than city ryokan.',
-        bookLinks: [
-          { label: 'Rakuten Travel', url: 'https://travel.rakuten.com/search/?checkin=2026-04-30&checkout=2026-05-01&rooms=1&adults=2&keyword=okuhida+onsen+ryokan' },
-          { label: 'Jalan.net', url: 'https://www.jalan.net/en/japan_hotels_ryokan/Takayama/' },
-          { label: 'Agoda', url: 'https://www.agoda.com/search?city=4955&checkIn=2026-04-30&checkOut=2026-05-01&rooms=1&adults=2&searchText=okuhida%20onsen%20ryokan' },
-        ],
-      },
-    ],
-    tip: '💡 Okuhida ryokan is smarter than Kyoto — cheaper (¥15-25K vs ¥30K+ in Kyoto), mountain onsen >> city onsen, and 2 meals included!',
-    recommended: '💡 Book one with outdoor rotenburo (open-air bath). Shinhotaka area has the best mountain views.',
+    tip: '💡 Same guesthouse all 4 nights — stable base. Day 9 Kamikochi, Day 10 FREE DAY (sleep in!), Day 11 Shirakawa-go.',
+    recommended: '💡 K\'s House — well-known among travelers, great common area, walking distance to everything.',
   },
   {
     city: 'Tokyo',
     emoji: '🏙️',
-    nights: '3 nights (May 1-4)',
+    nights: '3 nights (May 2-4)',
     area: 'Akihabara or Ueno',
     order: 4,
     options: [
       {
         type: 'Mid', name: '🏢 APA Hotel Akihabara Station', price: '¥9,000-14,000/night', idr: 'Rp 900K-1.4M',
-        note: 'Walking distance to ALL card shops! Private double room. Perfect base for card hunting Day 12.',
+        note: 'Walking distance to ALL card shops! Private double room. Perfect base for card hunting.',
         bookLinks: [
-          { label: 'Agoda', url: 'https://www.agoda.com/search?city=14125&checkIn=2026-05-01&checkOut=2026-05-04&rooms=1&adults=2&searchText=akihabara' },
-          { label: 'Booking', url: 'https://www.booking.com/search.html?ss=Akihabara%2C+Tokyo&checkin=2026-05-01&checkout=2026-05-04&group_adults=2' },
+          { label: 'Agoda', url: 'https://www.agoda.com/search?city=14125&checkIn=2026-05-02&checkOut=2026-05-04&rooms=1&adults=2&searchText=akihabara' },
+          { label: 'Booking', url: 'https://www.booking.com/search.html?ss=Akihabara%2C+Tokyo&checkin=2026-05-02&checkout=2026-05-04&group_adults=2' },
         ],
       },
       {
         type: 'Budget', name: '🏢 Toyoko Inn Ueno', price: '¥8,000-12,000/night', idr: 'Rp 800K-1.2M',
         note: 'Free breakfast, near Ameyoko Market + Ueno Station (easy airport access on departure day).',
         bookLinks: [
-          { label: 'Agoda', url: 'https://www.agoda.com/search?city=14125&checkIn=2026-05-01&checkOut=2026-05-04&rooms=1&adults=2&searchText=toyoko%20inn%20ueno' },
-          { label: 'Booking', url: 'https://www.booking.com/search.html?ss=Toyoko+Inn+Ueno&checkin=2026-05-01&checkout=2026-05-04&group_adults=2' },
+          { label: 'Agoda', url: 'https://www.agoda.com/search?city=14125&checkIn=2026-05-02&checkOut=2026-05-04&rooms=1&adults=2&searchText=toyoko%20inn%20ueno' },
+          { label: 'Booking', url: 'https://www.booking.com/search.html?ss=Toyoko+Inn+Ueno&checkin=2026-05-02&checkout=2026-05-04&group_adults=2' },
         ],
       },
       {
         type: 'Budget', name: '🏨 Khaosan World Asakusa', price: '¥3,500-5,000/night', idr: 'Rp 350-500K',
         note: 'Top-rated hostel. Private couple rooms available. Near Senso-ji. Good budget option.',
         bookLinks: [
-          { label: 'Agoda', url: 'https://www.agoda.com/search?city=14125&checkIn=2026-05-01&checkOut=2026-05-04&rooms=1&adults=2&searchText=Khaosan%20World%20Asakusa' },
-          { label: 'Booking', url: 'https://www.booking.com/search.html?ss=Khaosan+World+Asakusa&checkin=2026-05-01&checkout=2026-05-04&group_adults=2' },
+          { label: 'Agoda', url: 'https://www.agoda.com/search?city=14125&checkIn=2026-05-02&checkOut=2026-05-04&rooms=1&adults=2&searchText=Khaosan%20World%20Asakusa' },
+          { label: 'Booking', url: 'https://www.booking.com/search.html?ss=Khaosan+World+Asakusa&checkin=2026-05-02&checkout=2026-05-04&group_adults=2' },
         ],
       },
     ],
-    tip: '⚠️ May 1-3 is PEAK Golden Week. Prices 2-3x normal. BOOK NOW or you\'ll pay premium.',
+    tip: '⚠️ May 2-4 is PEAK Golden Week. Prices 2-3x normal. BOOK NOW or you\'ll pay premium.',
     recommended: '💡 APA Akihabara = walk to card shops. Worth the extra for card hunting convenience.',
   },
 ]
@@ -119,7 +134,7 @@ export default function Accommodation() {
           <p className="text-sakura font-heading font-semibold text-sm tracking-widest uppercase mb-3">宿泊 — Where to Stay</p>
           <h2 className="text-4xl sm:text-5xl font-heading font-bold text-dark mb-4">Accommodation Guide</h2>
           <p className="text-dark-light max-w-2xl mx-auto text-lg">
-            13 nights total. Kyoto (5) → Takayama guesthouse (4) → Okuhida ryokan (1) → Tokyo (3). Book Golden Week dates NOW!
+            13 nights total. Kyoto (4) → Gifu ryokan + hotel (2) → Takayama guesthouse (4) → Tokyo (3). Only 3 hotel changes! Book Golden Week dates NOW!
           </p>
         </div>
 
@@ -148,7 +163,6 @@ export default function Accommodation() {
                     <div className="text-xs text-dark-light mt-1">{opt.price}</div>
                     <p className="text-sm text-dark-light mt-2">{opt.note}</p>
                     
-                    {/* Booking links */}
                     {opt.bookLinks && (
                       <div className="flex flex-wrap gap-2 mt-3">
                         {opt.bookLinks.map((link) => (
@@ -180,14 +194,14 @@ export default function Accommodation() {
           <div className="flex justify-center gap-8 text-sm">
             <div>
               <span className="text-dark-light">Budget:</span>{' '}
-              <span className="font-bold text-sakura-dark">Rp 7.5M (~¥75K)</span>
+              <span className="font-bold text-sakura-dark">Rp 8M (~¥80K)</span>
             </div>
             <div>
-              <span className="text-dark-light">Mid:</span>{' '}
-              <span className="font-bold text-sakura-dark">Rp 13M (~¥130K)</span>
+              <span className="text-dark-light">Mid + Ryokan:</span>{' '}
+              <span className="font-bold text-sakura-dark">Rp 15M (~¥150K)</span>
             </div>
           </div>
-          <p className="text-xs text-dark-light mt-2">Includes 1 ryokan night with 2 meals. Golden Week surcharges may apply.</p>
+          <p className="text-xs text-dark-light mt-2">Includes 1 ryokan night with 2 meals (kaiseki dinner + breakfast). Golden Week surcharges may apply.</p>
         </div>
 
         {/* Quick book CTA */}
@@ -195,7 +209,7 @@ export default function Accommodation() {
           <p className="text-sm font-semibold text-red-700 mb-2">⚠️ BOOK NOW — Golden Week Warning!</p>
           <p className="text-xs text-red-600 mb-3">Apr 29 - May 5 is Golden Week. Hotels sell out and prices 2-3x normal. Don't wait!</p>
           <div className="flex justify-center gap-3 flex-wrap">
-            <a href="https://www.agoda.com/search?city=72306&checkIn=2026-04-21&checkOut=2026-04-26&rooms=1&adults=2" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs font-bold px-4 py-2 rounded-full bg-red-600 text-white hover:bg-red-700 transition-colors">🔍 Search Agoda</a>
+            <a href="https://www.agoda.com/search?city=72306&checkIn=2026-04-21&checkOut=2026-04-25&rooms=1&adults=2" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs font-bold px-4 py-2 rounded-full bg-red-600 text-white hover:bg-red-700 transition-colors">🔍 Search Agoda</a>
             <a href="https://www.booking.com/searchresults.html?ss=Kyoto&checkin=2026-04-21&checkout=2026-05-04&group_adults=2" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs font-bold px-4 py-2 rounded-full bg-blue-600 text-white hover:bg-blue-700 transition-colors">🔍 Search Booking.com</a>
           </div>
         </div>
