@@ -30,37 +30,20 @@ const cities = [
     city: 'Gifu (Nagaragawa Onsen)',
     emoji: '🏯',
     nights: '2 nights (Apr 26-27)',
-    area: 'Nagaragawa Onsen district (riverside) + Gifu Station area',
+    area: 'Nagaragawa Onsen district (riverside)',
     order: 2,
     options: [
       {
-        type: 'Special', name: '🏯 Juhachiro (十八楼)', price: '¥20,000-35,000/night w/ 2 meals', idr: 'Rp 2-3.5M',
-        note: '🌟 THE PICK. 300+ year old ryokan right on Nagara River. Outdoor rotenburo onsen, multi-course kaiseki, tatami rooms. One of Gifu\'s most historic inns. Night 1 here.',
+        type: 'Special', name: '🏨 Miyako Hotel Gifu Nagaragawa', price: '¥12,000-20,000/night', idr: 'Rp 1.2-2M',
+        note: '🌟 THE PICK. 4-star hotel right on Nagara River. Nagaragawa Onsen natural hot spring, river-view rooms, 3 restaurants. Rating 8.7/10 (1,078 reviews). Same hotel both nights = zero checkout stress!',
         bookLinks: [
-          { label: 'Official Site', url: 'https://www.18rou.com/' },
-          { label: 'Rakuten Travel', url: 'https://travel.rakuten.com/hotel/Japan-Gifu_Prefecture-Gifu-Juhachiro/69651/?checkin=2026-04-26&checkout=2026-04-27&rooms=1&adults=2' },
-          { label: 'Booking', url: 'https://www.booking.com/search.html?ss=Juhachiro+Gifu&checkin=2026-04-26&checkout=2026-04-27&group_adults=2' },
-        ],
-      },
-      {
-        type: 'Special', name: '🏯 Miyako Hotel Gifu Nagaragawa', price: '¥15,000-25,000/night', idr: 'Rp 1.5-2.5M',
-        note: '4-star hotel on Nagara River. Onsen bath, river-view rooms, 3 restaurants. More modern than Juhachiro but still has onsen. Good alternative if Juhachiro is full.',
-        bookLinks: [
-          { label: 'Booking', url: 'https://www.booking.com/hotel/jp/gifu-miyako.html?checkin=2026-04-26&checkout=2026-04-27&group_adults=2' },
-          { label: 'Agoda', url: 'https://www.agoda.com/miyako-hotel-gifu-nagaragawa/hotel/gifu-jp.html?checkIn=2026-04-26&checkOut=2026-04-27&rooms=1&adults=2' },
-        ],
-      },
-      {
-        type: 'Budget', name: '🏢 Dormy Inn Gifu Ekimae', price: '¥8,000-12,000/night', idr: 'Rp 800K-1.2M',
-        note: 'Night 2 budget option near Gifu Station. Has public onsen bath + free late-night ramen! 5 min walk to JR Gifu.',
-        bookLinks: [
-          { label: 'Booking', url: 'https://www.booking.com/hotel/jp/dormy-inn-gifu-ekimae.html?checkin=2026-04-27&checkout=2026-04-28&group_adults=2' },
-          { label: 'Agoda', url: 'https://www.agoda.com/dormy-inn-gifu-ekimae/hotel/gifu-jp.html?checkIn=2026-04-27&checkOut=2026-04-28&rooms=1&adults=2' },
+          { label: 'Booking', url: 'https://www.booking.com/hotel/jp/gifu-miyako.html?checkin=2026-04-26&checkout=2026-04-28&group_adults=2' },
+          { label: 'Agoda', url: 'https://www.agoda.com/miyako-hotel-gifu-nagaragawa/hotel/gifu-jp.html?checkIn=2026-04-26&checkOut=2026-04-28&rooms=1&adults=2' },
         ],
       },
     ],
-    tip: '💡 Night 1: Ryokan splurge (Juhachiro or Miyako) with kaiseki + onsen. Night 2: Budget hotel near station for easy Hida Express departure next morning.',
-    recommended: '💡 Juhachiro — 300 year history, riverside rotenburo, kaiseki dinner included. THE ryokan of the trip.',
+    tip: '💡 Same hotel both nights — leave bags in room for Monet\'s Pond day trip. No packing, no checkout, just relax.',
+    recommended: '💡 Miyako Hotel — onsen + river views + 4-star comfort. Book a river-view room for the best experience.',
   },
   {
     city: 'Takayama',
