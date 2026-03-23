@@ -4,7 +4,7 @@ const stats = [
   { emoji: '🚲', value: '2', label: 'Cycling Days', jp: '自転車' },
   { emoji: '🏔️', value: '1', label: 'Alpine Hike', jp: '上高地' },
   { emoji: '🃏', value: '∞', label: 'Cards to Hunt', jp: 'カード' },
-  { emoji: '💰', value: 'Rp22-36M', label: 'Budget Range', jp: '予算' },
+  { emoji: '💰', value: 'Rp24-37M', label: 'Budget Range', jp: '予算' },
 ]
 
 export default function Overview() {
@@ -15,7 +15,7 @@ export default function Overview() {
           <p className="text-sakura font-heading font-semibold text-sm tracking-widest uppercase mb-3">旅の概要 — Trip Overview</p>
           <h2 className="text-4xl sm:text-5xl font-heading font-bold text-dark mb-4">The Adventure at a Glance</h2>
           <p className="text-dark-light max-w-2xl mx-auto text-lg">
-            Two weeks across Japan — Kyoto first, Gifu riverside ryokan, Takayama Alps base with Kamikochi day trip, Tokyo last for card hunting & flea market. One free day built in. No rushing.
+            Two weeks across Japan — Kyoto first, Gifu onsen town, Takayama Alps base with Kamikochi day trip, Tokyo last for card hunting & flea market. Two private couples onsen days, one free day. No rushing.
           </p>
         </div>
 
@@ -46,7 +46,7 @@ export default function Overview() {
               { city: '🚃', days: '' },
               { city: '🌲 Takayama', days: '4 nights' },
               { city: '🚄', days: '' },
-              { city: '🏙️ Tokyo', days: '3 nights' },
+              { city: '🏙️ Tokyo', days: '2 nights' },
               { city: '🛫', days: 'May 4' },
             ].map((stop, i, arr) => (
               <div key={i} className="flex items-center gap-3">

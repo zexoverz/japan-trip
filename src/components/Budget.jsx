@@ -6,28 +6,28 @@ const budgetData = [
     emoji: '🚅',
     budget: { jpy: '¥78,000', idr: 'Rp 7.8M' },
     mid: { jpy: '¥78,000', idr: 'Rp 7.8M' },
-    note: 'JR Pass 14-day + Suica + bikes + Kamikochi/Okuhida/Shirakawa-go buses + ropeway',
+    note: 'JR Pass 14-day + Suica + bikes + Kamikochi/Shirakawa-go/Monet\'s Pond buses',
   },
   {
     category: 'Accommodation',
     emoji: '🏨',
-    budget: { jpy: '¥75,000', idr: 'Rp 7.5M' },
-    mid: { jpy: '¥130,000', idr: 'Rp 13M' },
-    note: '13 nights — Kyoto hostel (5) + Takayama guesthouse (4) + Okuhida ryokan (1) + Tokyo (3)',
+    budget: { jpy: '¥94,000', idr: 'Rp 9.4M' },
+    mid: { jpy: '¥140,000', idr: 'Rp 14M' },
+    note: '12 nights — Kyoto hostel (4) + Gifu Dormy Inn (2) + Takayama guesthouse (4) + Tokyo (2) + 2× private onsen',
   },
   {
     category: 'Food',
     emoji: '🍜',
     budget: { jpy: '¥42,000', idr: 'Rp 4.2M' },
     mid: { jpy: '¥98,000', idr: 'Rp 9.8M' },
-    note: '14 days × 2 people — konbini to restaurants + splurges. Ryokan dinner+breakfast included!',
+    note: '14 days × 2 people — konbini to restaurants + splurges. Dormy Inn free ramen + Super Hotel free breakfast!',
   },
   {
     category: 'Sightseeing',
     emoji: '⛩️',
     budget: { jpy: '¥16,000', idr: 'Rp 1.6M' },
     mid: { jpy: '¥22,000', idr: 'Rp 2.2M' },
-    note: 'Temples, museums, Shirakawa-go houses, Shinhotaka Ropeway',
+    note: 'Temples, museums, Shirakawa-go houses, private onsen ×2',
   },
   {
     category: 'Misc/Emergency',
@@ -39,8 +39,8 @@ const budgetData = [
 ]
 
 const totals = {
-  budget: { jpy: '¥221,000', idr: 'Rp 22.1M' },
-  mid: { jpy: '¥358,000', idr: 'Rp 35.8M' },
+  budget: { jpy: '¥240,000', idr: 'Rp 24M' },
+  mid: { jpy: '¥370,000', idr: 'Rp 37M' },
 }
 
 export default function Budget() {
@@ -53,7 +53,7 @@ export default function Budget() {
           <p className="text-sakura font-heading font-semibold text-sm tracking-widest uppercase mb-3">予算 — Budget</p>
           <h2 className="text-4xl sm:text-5xl font-heading font-bold text-dark mb-4">Trip Budget</h2>
           <p className="text-dark-light max-w-2xl mx-auto text-lg">
-            All prices in JPY and IDR (¥1 ≈ Rp 100). Excluding card shopping budget.
+            All prices in JPY and IDR (¥1 ≈ Rp 100). For 2 people. Excluding card shopping budget.
           </p>
         </div>
 
@@ -121,7 +121,7 @@ export default function Budget() {
         {/* Per person note */}
         <p className="text-center text-sm text-dark-light mt-6">
           💡 That's about <span className="font-semibold text-sakura-dark">
-            {mode === 'budget' ? 'Rp 11M' : 'Rp 17.9M'}
+            {mode === 'budget' ? 'Rp 12M' : 'Rp 18.5M'}
           </span> per person — {mode === 'budget' ? 'super affordable!' : 'very comfortable!'}
         </p>
 
@@ -145,14 +145,14 @@ export default function Budget() {
               <div className="text-xs text-dark-light mt-1">Takayama ↔ UNESCO village</div>
             </div>
             <div className="bg-cream/50 rounded-xl p-4">
-              <div className="font-heading font-semibold text-sm">Okuhida Bus (RT)</div>
-              <div className="text-sakura-dark font-bold">¥3,200 (~Rp 320K)</div>
-              <div className="text-xs text-dark-light mt-1">Takayama ↔ Okuhida Onsen</div>
+              <div className="font-heading font-semibold text-sm">Monet's Pond Bus (RT)</div>
+              <div className="text-sakura-dark font-bold">¥3,000 (~Rp 300K)</div>
+              <div className="text-xs text-dark-light mt-1">Gifu Station → Itadori area</div>
             </div>
             <div className="bg-cream/50 rounded-xl p-4">
-              <div className="font-heading font-semibold text-sm">Shinhotaka Ropeway</div>
-              <div className="text-sakura-dark font-bold">¥3,300 (~Rp 330K)</div>
-              <div className="text-xs text-dark-light mt-1">Double-decker gondola to 2,156m</div>
+              <div className="font-heading font-semibold text-sm">Private Onsen ×2</div>
+              <div className="text-sakura-dark font-bold">¥7,000 (~Rp 700K)</div>
+              <div className="text-xs text-dark-light mt-1">Juhachiro (Gifu) + Alpina (Takayama)</div>
             </div>
             <div className="bg-cream/50 rounded-xl p-4">
               <div className="font-heading font-semibold text-sm">Suica + Bikes + Misc</div>
