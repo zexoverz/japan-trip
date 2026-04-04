@@ -1,51 +1,54 @@
-import { useState } from 'react'
+const spentData = [
+  {
+    category: 'Flights',
+    emoji: '✈️',
+    status: 'paid',
+    amount: 'Rp 12M',
+    note: 'Jakarta → Narita → Jakarta (2 people). Booked.',
+  },
+  {
+    category: 'Hotels (13 nights)',
+    emoji: '🏨',
+    status: 'paid',
+    amount: 'Rp 13.35M',
+    note: 'Kyoto (5n) + Gifu (2n) + Takayama (4n) + Tokyo (2n). All booked & paid.',
+  },
+]
 
 const budgetData = [
   {
-    category: 'Transport',
+    category: 'Transport (trains + buses)',
     emoji: '🚅',
-    budget: { jpy: '¥78,000', idr: 'Rp 7.8M' },
-    mid: { jpy: '¥78,000', idr: 'Rp 7.8M' },
-    note: 'JR Pass 14-day + Suica + bikes + Kamikochi/Shirakawa-go/Monet\'s Pond buses',
+    budget: { jpy: '¥118,440', idr: 'Rp 11.84M' },
+    note: 'Individual tickets — no JR Pass. Shinkansen + Hida Express + local buses. See Tickets section for full breakdown.',
   },
   {
-    category: 'Accommodation',
-    emoji: '🏨',
-    budget: { jpy: '¥94,000', idr: 'Rp 9.4M' },
-    mid: { jpy: '¥140,000', idr: 'Rp 14M' },
-    note: '12 nights — Kyoto hostel (4) + Gifu Dormy Inn (2) + Takayama guesthouse (4) + Tokyo (2) + 2× private onsen',
-  },
-  {
-    category: 'Food',
+    category: 'Food (14 days, 2 people)',
     emoji: '🍜',
     budget: { jpy: '¥42,000', idr: 'Rp 4.2M' },
-    mid: { jpy: '¥98,000', idr: 'Rp 9.8M' },
-    note: '14 days × 2 people — konbini to restaurants + splurges. Dormy Inn free ramen + Super Hotel free breakfast!',
+    note: 'Konbini breakfast + ramen lunch + izakaya dinner. Dormy Inn free ramen night saves money!',
   },
   {
-    category: 'Sightseeing',
+    category: 'Sightseeing & Entrance',
     emoji: '⛩️',
     budget: { jpy: '¥16,000', idr: 'Rp 1.6M' },
-    mid: { jpy: '¥22,000', idr: 'Rp 2.2M' },
-    note: 'Temples, museums, Shirakawa-go houses, private onsen ×2',
+    note: 'Temples, Kamikochi entry, Shirakawa-go, Monkey Park, Nijo Castle, private onsen ×2.',
   },
   {
-    category: 'Misc/Emergency',
+    category: 'Misc / Emergency',
     emoji: '🆘',
     budget: { jpy: '¥10,000', idr: 'Rp 1M' },
-    mid: { jpy: '¥30,000', idr: 'Rp 3M' },
-    note: 'Pocket WiFi, souvenirs, unexpected costs',
+    note: 'eSIM/Pocket WiFi, souvenirs, unexpected costs, last-minute needs.',
   },
 ]
 
 const totals = {
-  budget: { jpy: '¥240,000', idr: 'Rp 24M' },
-  mid: { jpy: '¥370,000', idr: 'Rp 37M' },
+  alreadyPaid: 'Rp 25.35M',
+  remaining: 'Rp 18.64M',
+  grand: 'Rp 43.99M',
 }
 
 export default function Budget() {
-  const [mode, setMode] = useState('budget')
-
   return (
     <section id="budget" className="py-20 px-4 sm:px-6">
       <div className="max-w-4xl mx-auto">
@@ -53,141 +56,112 @@ export default function Budget() {
           <p className="text-sakura font-heading font-semibold text-sm tracking-widest uppercase mb-3">予算 — Budget</p>
           <h2 className="text-4xl sm:text-5xl font-heading font-bold text-dark mb-4">Trip Budget</h2>
           <p className="text-dark-light max-w-2xl mx-auto text-lg">
-            All prices in JPY and IDR (¥1 ≈ Rp 100). For 2 people. Excluding card shopping budget.
+            All prices for 2 people. Excluding card shopping budget. Updated April 2026.
           </p>
         </div>
 
-        {/* Toggle */}
-        <div className="flex justify-center mb-10">
-          <div className="bg-white rounded-full p-1.5 shadow-sm border border-sakura/20 flex gap-1">
-            <button
-              onClick={() => setMode('budget')}
-              className={`px-5 py-2.5 rounded-full font-heading font-semibold text-sm transition-all duration-300 ${
-                mode === 'budget' ? 'bg-sakura text-white shadow-md' : 'text-dark-light hover:text-sakura-dark'
-              }`}
-            >
-              💰 Budget
-            </button>
-            <button
-              onClick={() => setMode('mid')}
-              className={`px-5 py-2.5 rounded-full font-heading font-semibold text-sm transition-all duration-300 ${
-                mode === 'mid' ? 'bg-sakura text-white shadow-md' : 'text-dark-light hover:text-sakura-dark'
-              }`}
-            >
-              ✨ Comfortable
-            </button>
+        {/* Already Paid */}
+        <div className="mb-6">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="text-lg font-heading font-bold text-green-700">✅ Already Paid</span>
+          </div>
+          <div className="space-y-3">
+            {spentData.map((item) => (
+              <div key={item.category} className="bg-green-50 border border-green-200 rounded-2xl p-4 flex items-center gap-4">
+                <div className="text-3xl flex-shrink-0">{item.emoji}</div>
+                <div className="flex-1 min-w-0">
+                  <div className="font-heading font-bold text-dark">{item.category}</div>
+                  <div className="text-xs text-dark-light">{item.note}</div>
+                </div>
+                <div className="text-right flex-shrink-0">
+                  <div className="font-heading font-bold text-lg text-green-700">{item.amount}</div>
+                  <div className="text-xs text-green-600 font-semibold">PAID ✅</div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Budget cards */}
-        <div className="space-y-3">
-          {budgetData.map((item) => (
-            <div key={item.category} className="bg-white rounded-2xl p-5 shadow-sm border border-sakura/10 flex items-center gap-4">
-              <div className="text-3xl flex-shrink-0">{item.emoji}</div>
-              <div className="flex-1 min-w-0">
-                <div className="font-heading font-bold text-dark">{item.category}</div>
-                <div className="text-xs text-dark-light">{item.note}</div>
-              </div>
-              <div className="text-right flex-shrink-0">
-                <div className="font-heading font-bold text-lg text-sakura-dark">
-                  {mode === 'budget' ? item.budget.idr : item.mid.idr}
+        {/* Still to spend */}
+        <div className="mb-6">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="text-lg font-heading font-bold text-dark">💴 Still to Spend in Japan</span>
+          </div>
+          <div className="space-y-3">
+            {budgetData.map((item) => (
+              <div key={item.category} className="bg-white rounded-2xl p-5 shadow-sm border border-sakura/10 flex items-center gap-4">
+                <div className="text-3xl flex-shrink-0">{item.emoji}</div>
+                <div className="flex-1 min-w-0">
+                  <div className="font-heading font-bold text-dark">{item.category}</div>
+                  <div className="text-xs text-dark-light">{item.note}</div>
                 </div>
-                <div className="text-xs text-dark-light">
-                  {mode === 'budget' ? item.budget.jpy : item.mid.jpy}
+                <div className="text-right flex-shrink-0">
+                  <div className="font-heading font-bold text-lg text-sakura-dark">{item.budget.idr}</div>
+                  <div className="text-xs text-dark-light">{item.budget.jpy}</div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+        </div>
 
-          {/* Total */}
+        {/* Totals */}
+        <div className="space-y-3">
+          <div className="bg-green-50 border border-green-200 rounded-2xl p-4 flex justify-between items-center">
+            <span className="font-heading font-semibold text-green-700">✅ Already Paid (flights + hotels)</span>
+            <span className="font-heading font-bold text-xl text-green-700">{totals.alreadyPaid}</span>
+          </div>
+          <div className="bg-cream rounded-2xl p-4 flex justify-between items-center border border-sakura/10">
+            <span className="font-heading font-semibold text-dark">💴 Still to Spend in Japan</span>
+            <span className="font-heading font-bold text-xl text-sakura-dark">{totals.remaining}</span>
+          </div>
           <div className="bg-gradient-to-r from-sakura to-sakura-dark rounded-2xl p-6 text-white shadow-lg">
             <div className="flex items-center justify-between">
               <div>
-                <div className="font-heading font-bold text-xl">Total Trip Cost</div>
-                <div className="text-white/80 text-sm">For 2 people, 14 days, 3 regions</div>
+                <div className="font-heading font-bold text-xl">Grand Total</div>
+                <div className="text-white/80 text-sm">For 2 people · 14 days · 3 regions</div>
+                <div className="text-white/70 text-xs mt-1">Excluding card shopping budget</div>
               </div>
               <div className="text-right">
-                <div className="font-heading font-bold text-3xl">
-                  {mode === 'budget' ? totals.budget.idr : totals.mid.idr}
-                </div>
-                <div className="text-white/80 text-sm">
-                  {mode === 'budget' ? totals.budget.jpy : totals.mid.jpy}
-                </div>
+                <div className="font-heading font-bold text-3xl">{totals.grand}</div>
+                <div className="text-white/80 text-sm">~Rp 22M per person</div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Per person note */}
-        <p className="text-center text-sm text-dark-light mt-6">
-          💡 That's about <span className="font-semibold text-sakura-dark">
-            {mode === 'budget' ? 'Rp 12M' : 'Rp 18.5M'}
-          </span> per person — {mode === 'budget' ? 'super affordable!' : 'very comfortable!'}
-        </p>
-
-        {/* Transport breakdown */}
-        <div className="mt-10 bg-white rounded-2xl p-6 shadow-sm border border-sakura/10">
-          <h3 className="font-heading font-bold text-lg mb-4">🚅 Transport Breakdown</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            <div className="bg-cream/50 rounded-xl p-4">
-              <div className="font-heading font-semibold text-sm">JR Pass (14-day)</div>
-              <div className="text-sakura-dark font-bold">¥50,000 (~Rp 5M)</div>
-              <div className="text-xs text-dark-light mt-1">All Shinkansen + JR local + Hida Express</div>
-            </div>
-            <div className="bg-cream/50 rounded-xl p-4">
-              <div className="font-heading font-semibold text-sm">Kamikochi Bus (RT)</div>
-              <div className="text-sakura-dark font-bold">¥6,400 (~Rp 640K)</div>
-              <div className="text-xs text-dark-light mt-1">Takayama → Hirayu → Kamikochi</div>
-            </div>
-            <div className="bg-cream/50 rounded-xl p-4">
-              <div className="font-heading font-semibold text-sm">Shirakawa-go Bus (RT)</div>
-              <div className="text-sakura-dark font-bold">¥5,200 (~Rp 520K)</div>
-              <div className="text-xs text-dark-light mt-1">Takayama ↔ UNESCO village</div>
-            </div>
-            <div className="bg-cream/50 rounded-xl p-4">
-              <div className="font-heading font-semibold text-sm">Monet's Pond Bus (RT)</div>
-              <div className="text-sakura-dark font-bold">¥3,000 (~Rp 300K)</div>
-              <div className="text-xs text-dark-light mt-1">Gifu Station → Itadori area</div>
-            </div>
-            <div className="bg-cream/50 rounded-xl p-4">
-              <div className="font-heading font-semibold text-sm">Private Onsen ×2</div>
-              <div className="text-sakura-dark font-bold">¥7,000 (~Rp 700K)</div>
-              <div className="text-xs text-dark-light mt-1">Juhachiro (Gifu) + Alpina (Takayama)</div>
-            </div>
-            <div className="bg-cream/50 rounded-xl p-4">
-              <div className="font-heading font-semibold text-sm">Suica + Bikes + Misc</div>
-              <div className="text-sakura-dark font-bold">¥8,200 (~Rp 820K)</div>
-              <div className="text-xs text-dark-light mt-1">Metro, bus, konbini, bike rentals</div>
-            </div>
-          </div>
-          <p className="text-xs text-dark-light mt-4 bg-amber-50 rounded-lg p-3 border border-amber-200">
-            💡 <strong>JR Pass saves money</strong> for this route: Tokyo → Kyoto → Nagoya → Takayama → Nagoya → Tokyo. Individual Shinkansen + Hida Express tickets would cost ~¥70,000+ alone!
+        {/* Transport breakdown note */}
+        <div className="mt-6 bg-amber-50 rounded-2xl p-5 border border-amber-200">
+          <div className="font-heading font-bold text-amber-800 mb-2">🚅 No JR Pass — Saves ~Rp 4.16M</div>
+          <p className="text-sm text-amber-700">
+            JR Pass 14-day would cost ¥160,000 (~Rp 16M) for 2 people. Our individual tickets total ¥118,440 (~Rp 11.84M). 
+            See the <strong>Tickets</strong> section for the full per-route breakdown.
           </p>
         </div>
 
         {/* Card budget separate */}
         <div className="mt-6 bg-white rounded-2xl p-6 shadow-sm border border-sakura/10">
-          <h3 className="font-heading font-bold text-lg mb-4">🃏 Card Shopping Budget (Separate)</h3>
+          <h3 className="font-heading font-bold text-lg mb-4">🃏 Card Shopping Budget (Separate — FORU dependent)</h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div className="bg-purple-50 rounded-xl p-4">
-              <div className="font-heading font-semibold text-sm">Munch Psyduck PSA 10</div>
-              <div className="text-purple-700 font-bold">~Rp 20-22M</div>
-              <div className="text-xs text-dark-light mt-1">¥200-220K</div>
+              <div className="font-heading font-semibold text-sm">🔴 Sanji Manga Art PSA 10</div>
+              <div className="text-purple-700 font-bold">~Rp 24M</div>
+              <div className="text-xs text-dark-light mt-1">¥192-240K · OP06-119 コミパラ · Grail #1</div>
             </div>
             <div className="bg-purple-50 rounded-xl p-4">
-              <div className="font-heading font-semibold text-sm">Magikarp AR PSA 10</div>
-              <div className="text-purple-700 font-bold">~Rp 3.3M</div>
-              <div className="text-xs text-dark-light mt-1">¥33K</div>
+              <div className="font-heading font-semibold text-sm">🔴 Luffy New Emperor PSA 10</div>
+              <div className="text-purple-700 font-bold">~Rp 28-35M</div>
+              <div className="text-xs text-dark-light mt-1">¥280-350K · OP09-119 コミパラ · Grail #2 (in-store hunt)</div>
             </div>
             <div className="bg-purple-50 rounded-xl p-4">
-              <div className="font-heading font-semibold text-sm">OP Manga/G5 Cards</div>
-              <div className="text-purple-700 font-bold">~Rp 14-16M</div>
-              <div className="text-xs text-dark-light mt-1">Various targets</div>
+              <div className="font-heading font-semibold text-sm">🟡 Mini Manga Raw ×2-3</div>
+              <div className="text-purple-700 font-bold">~Rp 4-6M</div>
+              <div className="text-xs text-dark-light mt-1">¥10-20K each · Complete set goal</div>
             </div>
           </div>
           <div className="mt-3 bg-gradient-to-r from-purple-100 to-purple-50 rounded-xl p-4 text-center">
-            <span className="font-heading font-bold text-purple-700">Total Card Budget: ~Rp 39.5M (~¥395K)</span>
+            <span className="font-heading font-bold text-purple-700">Best Case (FORU liquids): +~Rp 54M card budget</span>
           </div>
+          <p className="text-xs text-center text-dark-light mt-2">🎯 Worst case (no FORU): ~Rp 8.25M cash for Japan. Still enough for food + transport + small buys.</p>
         </div>
       </div>
     </section>

@@ -3,9 +3,11 @@ import { useState, useEffect } from 'react'
 const navItems = [
   { label: 'Overview', href: '#overview', jp: '概要' },
   { label: 'Itinerary', href: '#itinerary', jp: '旅程' },
-  { label: 'Budget', href: '#budget', jp: '予算' },
-  { label: 'Cards', href: '#cards', jp: 'カード' },
   { label: 'Stay', href: '#accommodation', jp: '宿泊' },
+  { label: 'Budget', href: '#budget', jp: '予算' },
+  { label: 'Tickets', href: '#tickets', jp: '切符' },
+  { label: 'Hacks', href: '#transport-hacks', jp: '裏ワザ' },
+  { label: 'Cards', href: '#cards', jp: 'カード' },
   { label: 'Fitness', href: '#fitness', jp: '筋トレ' },
   { label: 'Tips', href: '#tips', jp: 'ヒント' },
   { label: 'Packing', href: '#packing', jp: '荷物' },

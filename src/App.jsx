@@ -4,6 +4,8 @@ import Hero from './components/Hero'
 import Overview from './components/Overview'
 import Itinerary from './components/Itinerary'
 import Budget from './components/Budget'
+import Tickets from './components/Tickets'
+import TransportHacks from './components/TransportHacks'
 import CardHunt from './components/CardHunt'
 import Accommodation from './components/Accommodation'
 import Fitness from './components/Fitness'
@@ -20,9 +22,11 @@ function App() {
       <Hero />
       <Overview />
       <Itinerary />
-      <Budget />
-      <CardHunt />
       <Accommodation />
+      <Budget />
+      <Tickets />
+      <TransportHacks />
+      <CardHunt />
       <Fitness />
       <Tips />
       <PackingChecklist />
