@@ -9,6 +9,7 @@ import TransportHacks from './components/TransportHacks'
 import CardHunt from './components/CardHunt'
 import Accommodation from './components/Accommodation'
 import Fitness from './components/Fitness'
+import Wardrobe from './components/Wardrobe'
 import Tips from './components/Tips'
 import PackingChecklist from './components/PackingChecklist'
 import Footer from './components/Footer'
@@ -28,6 +29,7 @@ function App() {
       <TransportHacks />
       <CardHunt />
       <Fitness />
+      <Wardrobe />
       <Tips />
       <PackingChecklist />
       <Footer />
