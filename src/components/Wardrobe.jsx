@@ -1,21 +1,77 @@
 import { useState } from 'react'
 
-// Data: Daily outfits — what to wear each day and where each item comes from
+// Data: Daily outfits — Faisal + Keiko, with sources (Indo/Thrift/Uniqlo)
 const dailyOutfits = [
-  { day: 1, date: 'Apr 21 Sel', city: 'Tokyo→Kyoto', outfit: 'Jogger + kaos polos + jaket hoodie', indo: 'Semua', thrift: '—', uniqlo: '—' },
-  { day: 2, date: 'Apr 22 Rab', city: 'Kyoto (Fushimi Inari)', outfit: 'Kaos polos + celana pendek olive + topi', indo: 'Semua', thrift: '— (thrift baru sore jam 16:30)', uniqlo: '—' },
-  { day: 3, date: 'Apr 23 Kam', city: 'Kyoto (Arashiyama)', outfit: 'Kaos polos + chino beige + overshirt', indo: 'Kaos, chino', thrift: 'Overshirt (Sesi 1)', uniqlo: '—' },
-  { day: 4, date: 'Apr 24 Jum', city: 'Kyoto 🚲 temple circuit', outfit: 'Kaos cepat kering + jogger (cycling)', indo: 'Semua (kit olahraga)', thrift: '—', uniqlo: '—' },
-  { day: 5, date: 'Apr 25 Sab', city: 'Kyoto/Nara', outfit: 'Kaos polos + sweater krim + celana netral', indo: 'Semua', thrift: '— (thrift sore jam 17:30)', uniqlo: '—' },
-  { day: 6, date: 'Apr 26 Min', city: 'Kyoto→Gifu', outfit: 'Kemeja kerah + chino gelap + jaket hoodie', indo: 'Chino, hoodie', thrift: 'Kemeja (Sesi 2)', uniqlo: '—' },
-  { day: 7, date: 'Apr 27 Sen', city: 'Gifu Monet\'s Pond ✨', outfit: 'Kemeja sage/krim + celana putih/krim (pre-wedding photo)', indo: '⭐ WAJIB dari Indo', thrift: '—', uniqlo: '—' },
-  { day: 8, date: 'Apr 28 Sel', city: 'Gifu→Takayama Edo', outfit: 'Henley coklat + chino gelap + rompi', indo: 'Chino', thrift: 'Henley + rompi (Sesi 2)', uniqlo: '—' },
-  { day: 9, date: 'Apr 29 Rab', city: 'KAMIKOCHI 🏔️', outfit: 'Base layer + hiking pants + fleece + jaket hujan', indo: 'Hiking pants, fleece, jaket hujan', thrift: '—', uniqlo: 'Heattech base layer' },
-  { day: 10, date: 'Apr 30 Kam', city: 'Takayama free (laundry)', outfit: 'Kaos polos + jogger', indo: 'Semua', thrift: '—', uniqlo: '—' },
-  { day: 11, date: 'May 1 Jum', city: 'Takayama 🚲 + Shirakawa-go', outfit: 'AIRism lengan panjang + jogger + jaket cycling', indo: 'Jogger', thrift: '—', uniqlo: 'AIRism top' },
-  { day: 12, date: 'May 2 Sab', city: 'Tokyo Akihabara', outfit: 'Pagi: kaos polos + jogger → Sore: graphic + cargo + bomber', indo: 'Pagi saja', thrift: 'Sore MEGA HAUL (Sesi 3)', uniqlo: '—' },
-  { day: 13, date: 'May 3 Min', city: 'Tokyo flea + sushi', outfit: 'Jeans + graphic tee + overshirt bersih', indo: '—', thrift: 'Semua (Sesi 3+4)', uniqlo: '—' },
-  { day: 14, date: 'May 4 Sen', city: 'Tokyo→Pulang ✈️', outfit: 'Jogger + hoodie + slip-on', indo: 'Semua', thrift: '—', uniqlo: '—' },
+  {
+    day: 1, date: 'Apr 21 Sel', city: 'Tokyo→Kyoto',
+    faisal: { outfit: 'Jogger + kaos polos + jaket hoodie', indo: 'Semua', thrift: '—', uniqlo: '—' },
+    keiko:  { outfit: 'Oversized sweater + jogger/legging + sneakers', indo: 'Semua', thrift: '—', uniqlo: '—' },
+  },
+  {
+    day: 2, date: 'Apr 22 Rab', city: 'Kyoto (Fushimi Inari)',
+    faisal: { outfit: 'Kaos polos + celana pendek olive + topi', indo: 'Semua', thrift: '— (sore jam 16:30)', uniqlo: '—' },
+    keiko:  { outfit: 'Kaos polos + rok midi + sneakers + topi bucket', indo: 'Semua', thrift: '— (sore jam 16:30)', uniqlo: '—' },
+  },
+  {
+    day: 3, date: 'Apr 23 Kam', city: 'Kyoto (Arashiyama)',
+    faisal: { outfit: 'Kaos polos + chino beige + overshirt', indo: 'Kaos, chino', thrift: 'Overshirt (Sesi 1)', uniqlo: '—' },
+    keiko:  { outfit: 'Dress midi bunga + kardigan rajut + sneakers', indo: 'Dress, sneakers', thrift: 'Kardigan vintage (Sesi 1)', uniqlo: '—' },
+  },
+  {
+    day: 4, date: 'Apr 24 Jum', city: 'Kyoto 🚲 temple circuit',
+    faisal: { outfit: 'Kaos cepat kering + jogger (cycling)', indo: 'Semua (kit olahraga)', thrift: '—', uniqlo: '—' },
+    keiko:  { outfit: 'Kaos cepat kering + legging/celana stretch + topi', indo: 'Semua', thrift: '—', uniqlo: '—' },
+  },
+  {
+    day: 5, date: 'Apr 25 Sab', city: 'Kyoto/Nara',
+    faisal: { outfit: 'Kaos polos + sweater krim + celana netral', indo: 'Semua', thrift: '— (sore jam 17:30)', uniqlo: '—' },
+    keiko:  { outfit: 'Blouse polos + rok midi + kardigan + sneakers', indo: 'Semua', thrift: '— (sore jam 17:30)', uniqlo: '—' },
+  },
+  {
+    day: 6, date: 'Apr 26 Min', city: 'Kyoto→Gifu',
+    faisal: { outfit: 'Kemeja kerah + chino gelap + jaket hoodie', indo: 'Chino, hoodie', thrift: 'Kemeja (Sesi 2)', uniqlo: '—' },
+    keiko:  { outfit: 'Oversized shirt + jeans + slip-on (travel comfy)', indo: 'Jeans, slip-on', thrift: 'Oversized shirt (Sesi 2)', uniqlo: '—' },
+  },
+  {
+    day: 7, date: 'Apr 27 Sen', city: 'Gifu Monet\'s Pond ✨',
+    faisal: { outfit: '⭐ Kemeja sage/krim + celana putih/krim (pre-wedding photo)', indo: '⭐ WAJIB dari Indo', thrift: '—', uniqlo: '—' },
+    keiko:  { outfit: '⭐ Dress panjang putih/sage + flower accent + sandal lembut (match Faisal)', indo: '⭐ WAJIB dari Indo', thrift: '—', uniqlo: '—' },
+  },
+  {
+    day: 8, date: 'Apr 28 Sel', city: 'Gifu→Takayama Edo',
+    faisal: { outfit: 'Henley coklat + chino gelap + rompi', indo: 'Chino', thrift: 'Henley + rompi (Sesi 2)', uniqlo: '—' },
+    keiko:  { outfit: 'Blouse vintage + rok midi hangat + kardigan tebal', indo: 'Kardigan, rok', thrift: 'Blouse vintage (Sesi 2)', uniqlo: '—' },
+  },
+  {
+    day: 9, date: 'Apr 29 Rab', city: 'KAMIKOCHI 🏔️',
+    faisal: { outfit: 'Base layer + hiking pants + fleece + jaket hujan', indo: 'Hiking pants, fleece, jaket hujan', thrift: '—', uniqlo: 'Heattech base layer' },
+    keiko:  { outfit: '⚠️ Base layer + hiking pants (JGN rok) + fleece + jaket hujan + topi', indo: 'Hiking pants, fleece, jaket hujan', thrift: '—', uniqlo: 'Heattech base layer' },
+  },
+  {
+    day: 10, date: 'Apr 30 Kam', city: 'Takayama free (laundry)',
+    faisal: { outfit: 'Kaos polos + jogger', indo: 'Semua', thrift: '—', uniqlo: '—' },
+    keiko:  { outfit: 'Kaos santai + legging + kardigan panjang', indo: 'Semua', thrift: '—', uniqlo: '—' },
+  },
+  {
+    day: 11, date: 'May 1 Jum', city: 'Takayama 🚲 + Shirakawa-go',
+    faisal: { outfit: 'AIRism lengan panjang + jogger + jaket cycling', indo: 'Jogger', thrift: '—', uniqlo: 'AIRism top' },
+    keiko:  { outfit: 'AIRism LS + jeans/legging tebal + jaket ringan', indo: 'Jeans/legging', thrift: '—', uniqlo: 'AIRism top' },
+  },
+  {
+    day: 12, date: 'May 2 Sab', city: 'Tokyo Akihabara',
+    faisal: { outfit: 'Pagi: kaos polos + jogger → Sore: graphic + cargo + bomber', indo: 'Pagi saja', thrift: 'Sore MEGA HAUL (Sesi 3)', uniqlo: '—' },
+    keiko:  { outfit: 'Kaos polos + rok denim / cargo + sneakers → sore upgrade thrift', indo: 'Pagi saja', thrift: 'Rok/dress vintage (Sesi 3)', uniqlo: '—' },
+  },
+  {
+    day: 13, date: 'May 3 Min', city: 'Tokyo flea + sushi farewell',
+    faisal: { outfit: 'Jeans + graphic tee + overshirt bersih', indo: '—', thrift: 'Semua (Sesi 3+4)', uniqlo: '—' },
+    keiko:  { outfit: '⭐ Dress farewell + jaket denim/vintage + sneakers bersih', indo: 'Sneakers', thrift: 'Dress + jaket (Sesi 3+4)', uniqlo: '—' },
+  },
+  {
+    day: 14, date: 'May 4 Sen', city: 'Tokyo→Pulang ✈️',
+    faisal: { outfit: 'Jogger + hoodie + slip-on', indo: 'Semua', thrift: '—', uniqlo: '—' },
+    keiko:  { outfit: 'Oversized sweater + legging + slip-on (airport comfy)', indo: 'Semua', thrift: '—', uniqlo: '—' },
+  },
 ]
 
 // Data: Pack list from Indonesia
@@ -147,6 +203,7 @@ const workoutDays = [
 
 export default function Wardrobe() {
   const [tab, setTab] = useState('outfits')
+  const [person, setPerson] = useState('faisal')
 
   const tabs = [
     { id: 'outfits', label: '📅 Outfit Harian' },
@@ -194,6 +251,31 @@ export default function Wardrobe() {
                 Koper berangkat <strong>50% kosong</strong>, pulang <strong>85% full + piece Jepang</strong>.
               </p>
             </div>
+
+            {/* Person toggle */}
+            <div className="flex justify-center gap-2 mb-2">
+              <button
+                onClick={() => setPerson('faisal')}
+                className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
+                  person === 'faisal'
+                    ? 'bg-sky text-white shadow-md'
+                    : 'bg-white text-dark-light hover:bg-sky/10 border border-sky-200'
+                }`}
+              >
+                👤 Faisal
+              </button>
+              <button
+                onClick={() => setPerson('keiko')}
+                className={`px-5 py-2 rounded-full text-sm font-semibold transition-all ${
+                  person === 'keiko'
+                    ? 'bg-sakura text-white shadow-md'
+                    : 'bg-white text-dark-light hover:bg-sakura/10 border border-sakura/20'
+                }`}
+              >
+                👩 Keiko
+              </button>
+            </div>
+
             <div className="overflow-x-auto bg-white rounded-2xl shadow-sm border border-sakura/10">
               <table className="w-full text-sm">
                 <thead className="bg-sakura/5">
@@ -201,27 +283,39 @@ export default function Wardrobe() {
                     <th className="text-left p-3 font-heading font-bold text-dark">Day</th>
                     <th className="text-left p-3 font-heading font-bold text-dark">Tanggal</th>
                     <th className="text-left p-3 font-heading font-bold text-dark">Kota</th>
-                    <th className="text-left p-3 font-heading font-bold text-dark">Outfit</th>
+                    <th className="text-left p-3 font-heading font-bold text-dark">
+                      Outfit {person === 'faisal' ? '👤 Faisal' : '👩 Keiko'}
+                    </th>
                     <th className="text-left p-3 font-heading font-bold text-blue-700">🎒 Indo</th>
                     <th className="text-left p-3 font-heading font-bold text-purple-700">🛍️ Thrift</th>
                     <th className="text-left p-3 font-heading font-bold text-red-700">🏪 Uniqlo</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {dailyOutfits.map((d) => (
-                    <tr key={d.day} className="border-t border-sakura/10 hover:bg-cream/50">
-                      <td className="p-3 font-bold text-sakura-dark">{d.day}</td>
-                      <td className="p-3 text-dark-light text-xs">{d.date}</td>
-                      <td className="p-3 text-dark-light text-xs">{d.city}</td>
-                      <td className="p-3 text-dark">{d.outfit}</td>
-                      <td className="p-3 text-blue-900 text-xs">{d.indo}</td>
-                      <td className="p-3 text-purple-900 text-xs">{d.thrift}</td>
-                      <td className="p-3 text-red-900 text-xs">{d.uniqlo}</td>
-                    </tr>
-                  ))}
+                  {dailyOutfits.map((d) => {
+                    const o = d[person]
+                    return (
+                      <tr key={d.day} className="border-t border-sakura/10 hover:bg-cream/50">
+                        <td className="p-3 font-bold text-sakura-dark">{d.day}</td>
+                        <td className="p-3 text-dark-light text-xs">{d.date}</td>
+                        <td className="p-3 text-dark-light text-xs">{d.city}</td>
+                        <td className="p-3 text-dark">{o.outfit}</td>
+                        <td className="p-3 text-blue-900 text-xs">{o.indo}</td>
+                        <td className="p-3 text-purple-900 text-xs">{o.thrift}</td>
+                        <td className="p-3 text-red-900 text-xs">{o.uniqlo}</td>
+                      </tr>
+                    )
+                  })}
                 </tbody>
               </table>
             </div>
+            {person === 'keiko' && (
+              <div className="bg-sakura/10 border border-sakura/30 rounded-2xl p-4 mt-3">
+                <p className="text-sm text-dark">
+                  <span className="font-semibold">💄 Catatan buat Keiko:</span> Day 7 pre-wedding photo di Monet's Pond — dress panjang putih/sage, match sama kemeja sage Faisal. Day 9 Kamikochi WAJIB hiking pants (bukan rok/dress) + layering tebal — 0-10°C di Alps. Sepatu: 1 sneakers daily + 1 slip-on buat hotel/onsen + hiking shoe (beli di Kyoto Day 1 bareng Faisal atau pake yang Faisal punya kalau size pas).
+                </p>
+              </div>
+            )}
           </div>
         )}
 

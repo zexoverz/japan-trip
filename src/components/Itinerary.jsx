@@ -6,6 +6,7 @@ const days = [
     city: 'Tokyo → Kyoto', cityColor: 'bg-orange-100 text-orange-600',
     theme: 'Arrival & Travel',
     isBicycleDay: false,
+    weather: { tag: '🌤️ Sejuk', temp: '10-19°C', level: 'mild' },
     fitness: { type: 'rest', label: '😴 REST DAY', detail: 'Travel day + jetlag. Sleep early, recover for tomorrow.' },
     image: 'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600&q=75',
     summary: 'Land at Narita, activate JR Pass, Shinkansen straight to Kyoto. No time to waste in Tokyo!',
@@ -35,6 +36,7 @@ const days = [
     city: 'Kyoto', cityColor: 'bg-orange-100 text-orange-600',
     theme: 'Iconic Kyoto',
     isBicycleDay: false,
+    weather: { tag: '🌤️ Sejuk', temp: '9-20°C', level: 'mild' },
     fitness: { type: 'run+push', label: '🏃 5AM Run + 💪 Push', detail: '5:00 Run Kamogawa River (5-8km) → 5:45 Back at hotel → Push workout: push-ups 4×15, diamond push-ups 3×12, pike push-ups 3×10, chair dips 3×12, plank 3×45s, crunches 3×20. Done by 6:15. Shower → breakfast → day starts fresh.', run: 'Kamogawa River Path, 5-8km' },
     image: 'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=600&q=75',
     summary: 'Thousand torii gates at dawn, Kyoto\'s Kitchen for street food, Gion geisha district at dusk.',
@@ -71,6 +73,7 @@ const days = [
     city: 'Kyoto', cityColor: 'bg-orange-100 text-orange-600',
     theme: 'Bamboo & Mountains',
     isBicycleDay: false,
+    weather: { tag: '🌤️ Sejuk', temp: '9-19°C', level: 'mild' },
     fitness: { type: 'legs', label: '🦵 5:30 Legs + Explosive', detail: '5:30 in room: Squats 4×20, Bulgarian split squats 3×12 each, jump squats 3×10, walking lunges 3×12, calf raises 4×20, glute bridges 3×15. Done by 6:00. Bonus: box jumps on park bench during Arashiyama walk.' },
     image: 'https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=75',
     summary: 'Bamboo Grove at dawn, monkey park, iconic bridge, scenic mountain train.',
@@ -102,6 +105,7 @@ const days = [
     city: 'Kyoto', cityColor: 'bg-orange-100 text-orange-600',
     theme: '🚲 Bicycle Day',
     isBicycleDay: true,
+    weather: { tag: '☀️ Sejuk-hangat', temp: '10-21°C', level: 'mild' },
     fitness: { type: 'bike+pull', label: '🚲 Cycling + 🦾 5:30 Pull', detail: '5:30 in room before cycling: Doorframe rows 4×12, superman holds 3×30s, reverse snow angels 3×15, backpack curls 3×15, plank shoulder taps 3×20, dead bugs 3×10. Done by 6:00 → breakfast → bike day starts 7:30.' },
     image: 'https://images.unsplash.com/photo-1490806843957-31f4c9a91c65?w=600&q=75',
     summary: '6+ major temples by bike in one day! Golden Pavilion, zen gardens, Philosopher\'s Path, Kiyomizu-dera. 20km flat ride.',
@@ -138,6 +142,7 @@ const days = [
     city: 'Kyoto → Nara', cityColor: 'bg-orange-100 text-orange-600',
     theme: '🦌 Temples & Deer',
     isBicycleDay: false,
+    weather: { tag: '🌤️ Sejuk', temp: '9-20°C', level: 'mild' },
     fitness: { type: 'push', label: '💪 5:30 Push Day', detail: '5:30 in room: Push-ups (wide) 4×15, diamond push-ups 3×12, pike push-ups 3×10, chair dips 3×12, plank 3×45s, bicycle crunches 3×20, mountain climbers 3×30s. Done by 6:00.' },
     image: 'https://images.unsplash.com/photo-1526481280693-3bfa7568e0f8?w=600&q=75',
     summary: '1,001 golden statues in the morning, bowing deer and giant Buddha in the afternoon. Last night in Kyoto!',
@@ -171,6 +176,7 @@ const days = [
     city: 'Kyoto → Gifu', cityColor: 'bg-violet-100 text-violet-600',
     theme: '♨️ Ryokan & Onsen',
     isBicycleDay: false,
+    weather: { tag: '☀️ Sejuk-hangat', temp: '10-21°C', level: 'mild' },
     fitness: { type: 'run', label: '🏃 5AM Kamogawa Run', detail: '5:00 Last Kamogawa River run (5km easy). Farewell Kyoto. Run → shower → check out → go.', run: 'Kamogawa River Path, 5km easy' },
     image: 'https://images.unsplash.com/photo-1480796927426-f609979314bd?w=600&q=75',
     summary: 'Farewell Kyoto → Shinkansen to Gifu. Castle on a mountain, Great Buddha, then check into Dormy Inn. Free ramen at night!',
@@ -209,6 +215,7 @@ const days = [
     city: 'Gifu', cityColor: 'bg-violet-100 text-violet-600',
     theme: '🎨 Hidden Gem Day',
     isBicycleDay: false,
+    weather: { tag: '☀️ Sejuk-hangat', temp: '11-22°C', level: 'mild' },
     fitness: { type: 'rest', label: '😌 SLOW DAY', detail: 'No workout. Dawn onsen replaces the gym. Let your body recover — you\'ve earned it after 5 days of Kyoto.' },
     image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&q=75',
     summary: 'Dormy Inn onsen morning, bus to magical Monet\'s Pond, then private couples onsen at 300-year Juhachiro ryokan. Same hotel, no checkout stress.',
@@ -245,6 +252,7 @@ const days = [
     city: 'Gifu → Takayama', cityColor: 'bg-emerald-100 text-emerald-700',
     theme: '🏘️ Old Japan',
     isBicycleDay: false,
+    weather: { tag: '🧥 Dingin', temp: '5-16°C', level: 'cold' },
     fitness: { type: 'run+legs', label: '🏃 5AM Run + 🦵 Legs', detail: '5:00 Quick Nagara River run (3-5km) → 5:40 Back → Legs: squats 4×20, jump squats 3×10, calf raises 4×20. Done by 6:00 → shower → checkout → train.' },
     image: 'https://images.unsplash.com/photo-1480796927426-f609979314bd?w=600&q=75',
     summary: 'Morning train through mountain gorge to Takayama. Afternoon: Edo-period streets, sake breweries, Hida beef sushi.',
@@ -283,6 +291,7 @@ const days = [
     city: 'Takayama → Kamikochi', cityColor: 'bg-emerald-100 text-emerald-700',
     theme: '🏔️ Japanese Alps Hike',
     isBicycleDay: false,
+    weather: { tag: '❄️ SUPER DINGIN', temp: '0-10°C', level: 'freezing' },
     fitness: { type: 'rest', label: '🥾 HIKE DAY (rest from gym)', detail: 'Kamikochi hike IS the workout — 6+ hours hiking at 1,500m elevation in the Japanese Alps. No extra gym needed.' },
     image: 'https://images.unsplash.com/photo-1528164344705-47542687000d?w=600&q=75',
     summary: 'Day trip to Kamikochi — pristine alpine valley at 1,500m. Crystal clear Azusa River, 3,000m peaks, iconic Kappa Bridge.',
@@ -318,6 +327,7 @@ const days = [
     city: 'Takayama', cityColor: 'bg-emerald-100 text-emerald-700',
     theme: '✨ Buffer / Rest Day',
     isBicycleDay: false,
+    weather: { tag: '🧥 Dingin', temp: '5-17°C', level: 'cold' },
     fitness: { type: 'rest', label: '😌 REST or light workout', detail: 'Your choice! Sleep in, or do a sunrise Miyagawa River run if you feel fresh. No pressure — this day is about recovery and spontaneity.' },
     image: 'https://images.unsplash.com/photo-1480796927426-f609979314bd?w=600&q=75',
     summary: 'Sleep in, explore at your own pace, then private couples onsen at Spa Hotel Alpina. Your second recharge day ♨️',
@@ -350,6 +360,7 @@ const days = [
     city: 'Takayama', cityColor: 'bg-emerald-100 text-emerald-700',
     theme: '🚲 Bicycle + UNESCO Village',
     isBicycleDay: true,
+    weather: { tag: '🧥 Dingin', temp: '6-18°C', level: 'cold' },
     fitness: { type: 'bike', label: '🚲 Cycling Day (cardio + legs)', detail: 'Cycling AM + Shirakawa-go walking PM = full body active day. No extra workout needed.' },
     image: 'https://images.unsplash.com/photo-1528164344705-47542687000d?w=600&q=75',
     summary: 'Morning cycling through rice paddies, afternoon UNESCO World Heritage thatched-roof village.',
@@ -385,6 +396,7 @@ const days = [
     city: 'Takayama → Tokyo', cityColor: 'bg-sky-100 text-sky-600',
     theme: '🃏 Travel + Card Hunt',
     isBicycleDay: false,
+    weather: { tag: '🌸 Hangat (Tokyo)', temp: '14-21°C', level: 'warm' },
     fitness: { type: 'push', label: '💪 5:30 Push (light)', detail: '5:30 light session before travel. Or skip — big card hunting afternoon ahead.' },
     image: 'https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=600&q=75',
     summary: 'Morning Hida Express + Shinkansen to Tokyo. Afternoon: straight into Akihabara + Nakano Broadway card hunting.',
@@ -423,6 +435,7 @@ const days = [
     city: 'Tokyo', cityColor: 'bg-sky-100 text-sky-600',
     theme: '🛍️ Flea Market Day',
     isBicycleDay: false,
+    weather: { tag: '🌸 Hangat', temp: '15-22°C', level: 'warm' },
     fitness: { type: 'run+pull', label: '🏃 5AM Run + 🦾 Pull', detail: '5:00 Imperial Palace Loop (5km) — THE most famous running route in Japan! → 5:40 Pull: doorframe rows 4×12, backpack curls 3×15, plank shoulder taps 3×20. Done by 6:10.', run: 'Imperial Palace Loop, 5km' },
     image: 'https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=75',
     summary: 'Oedo Antique Market (1st Sunday of May ✓) + Tsukiji + Ameyoko + any card shop revisits + farewell sushi.',
@@ -459,6 +472,7 @@ const days = [
     city: 'Tokyo', cityColor: 'bg-sky-100 text-sky-600',
     theme: '✈️ Departure',
     isBicycleDay: false,
+    weather: { tag: '🌸 Hangat', temp: '15-23°C', level: 'warm' },
     fitness: { type: 'legs', label: '🦵 LAST WORKOUT!', detail: 'Last workout of the trip! Squats 4×20, jump squats 3×10, walking lunges 3×12, calf raises 4×20. Go hard! Done by 6:00. You earned it. 💪' },
     image: 'https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=600&q=75',
     summary: 'Final konbini run for plane snacks, head to airport, duty-free matcha, fly home with memories.',
@@ -546,6 +560,16 @@ export default function Itinerary() {
                     {day.isBicycleDay && (
                       <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700">
                         🚲 Bicycle Day
+                      </span>
+                    )}
+                    {day.weather && (
+                      <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${
+                        day.weather.level === 'freezing' ? 'bg-blue-100 text-blue-800' :
+                        day.weather.level === 'cold' ? 'bg-sky-100 text-sky-700' :
+                        day.weather.level === 'warm' ? 'bg-pink-100 text-pink-600' :
+                        'bg-amber-100 text-amber-800'
+                      }`}>
+                        {day.weather.tag} {day.weather.temp}
                       </span>
                     )}
                     {day.fitness && (
