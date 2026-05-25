@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Date Ideas buat Nisa 💕</title>
+  <meta name="description" content="Proposal kencan cute di BSD & Gading Serpong" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --pink: #ff9eb5;
+      --pink-soft: #ffd6e0;
+      --cream: #fff5f0;
+      --peach: #ffe3d8;
+      --rose: #e8849c;
+      --dark: #5a4a52;
+      --text: #6d5c63;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(160deg, var(--cream) 0%, var(--peach) 50%, var(--pink-soft) 100%);
+      background-attachment: fixed;
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .hearts { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+    .heart {
+      position: absolute; font-size: 1.2rem; opacity: 0.5;
+      animation: float-up linear infinite;
+    }
+    @keyframes float-up {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      10% { opacity: 0.6; }
+      90% { opacity: 0.6; }
+      100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 1; }
+
+    /* Hero */
+    .hero { text-align: center; padding: 70px 20px 40px; }
+    .hero .badge {
+      display: inline-block; background: var(--pink); color: white;
+      font-weight: 600; font-size: 0.8rem; padding: 6px 16px; border-radius: 20px;
+      letter-spacing: 1px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(255,158,181,0.4);
+    }
+    .hero h1 {
+      font-family: 'Caveat', cursive; font-size: 3.2rem; color: var(--rose);
+      line-height: 1.1; margin-bottom: 14px;
+    }
+    .hero p { font-size: 1.05rem; max-width: 480px; margin: 0 auto; line-height: 1.6; }
+    .hero .sub { font-size: 0.85rem; margin-top: 12px; color: var(--rose); font-weight: 600; }
+
+    /* Random picker */
+    .picker { text-align: center; margin: 30px 0 10px; }
+    .spin-btn {
+      background: var(--rose); color: white; border: none; font-family: 'Quicksand';
+      font-weight: 700; font-size: 1rem; padding: 16px 32px; border-radius: 30px;
+      cursor: pointer; box-shadow: 0 6px 18px rgba(232,132,156,0.4);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .spin-btn:active { transform: scale(0.95); }
+    .spin-btn:hover { box-shadow: 0 8px 24px rgba(232,132,156,0.55); }
+    .picker-result {
+      margin-top: 18px; font-family: 'Caveat', cursive; font-size: 1.6rem;
+      color: var(--rose); min-height: 40px; font-weight: 700;
+      opacity: 0; transition: opacity 0.4s;
+    }
+    .picker-result.show { opacity: 1; }
+
+    /* Section */
+    .section-title {
+      font-family: 'Caveat', cursive; font-size: 2rem; color: var(--rose);
+      text-align: center; margin: 40px 0 8px;
+    }
+    .section-sub { text-align: center; font-size: 0.9rem; margin-bottom: 24px; }
+
+    /* Cards */
+    .cards { display: grid; gap: 18px; padding-bottom: 40px; }
+    .card {
+      background: rgba(255,255,255,0.85); border-radius: 24px; padding: 22px;
+      box-shadow: 0 8px 24px rgba(232,132,156,0.15); backdrop-filter: blur(6px);
+      border: 2px solid rgba(255,158,181,0.25);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(232,132,156,0.25); }
+    .card-head { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+    .card-emoji { font-size: 2.2rem; flex-shrink: 0; }
+    .card-title { font-size: 1.2rem; font-weight: 700; color: var(--rose); line-height: 1.2; }
+    .card-place { font-size: 0.8rem; color: var(--pink); font-weight: 600; margin-top: 2px; }
+    .card-desc { font-size: 0.92rem; line-height: 1.6; margin-bottom: 14px; }
+    .card-meta { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      font-size: 0.72rem; font-weight: 600; padding: 4px 12px; border-radius: 14px;
+      background: var(--peach); color: var(--rose);
+    }
+    .tag.vibe { background: var(--pink-soft); }
+    .tag.budget { background: #d4f0e0; color: #4a8b6a; }
+    .tag.time { background: #e0e8ff; color: #5a6ab0; }
+
+    /* Footer */
+    .footer {
+      text-align: center; padding: 40px 20px 60px;
+      font-family: 'Caveat', cursive; font-size: 1.5rem; color: var(--rose);
+    }
+    .footer small { display: block; font-family: 'Quicksand'; font-size: 0.75rem; color: var(--text); margin-top: 10px; font-weight: 500; }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 2.5rem; }
+      .hero { padding: 50px 16px 30px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts" id="hearts"></div>
+
+  <div class="container">
+    <!-- HERO -->
+    <div class="hero">
+      <span class="badge">💌 BUAT NISA</span>
+      <h1>Mau Date Kemana<br>Kita Hari Ini?</h1>
+      <p>Aku udah siapin beberapa ide kencan cute di sekitar <strong>BSD & Gading Serpong</strong>. Tinggal pilih, atau klik tombol di bawah biar takdir yang nentuin 🎀</p>
+      <p class="sub">~ pick one, atau spin aja ~</p>
+    </div>
+
+    <!-- RANDOM PICKER -->
+    <div class="picker">
+      <button class="spin-btn" onclick="spinDate()">🎲 Pilihin Date Random Dong</button>
+      <div class="picker-result" id="pickerResult"></div>
+    </div>
+
+    <!-- CARDS -->
+    <h2 class="section-title">Pilihan Kencan Kita 💕</h2>
+    <p class="section-sub">Geser & pilih yang paling kamu mau</p>
+
+    <div class="cards" id="cards"></div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      Apapun pilihannya, yang penting bareng kamu 🥰
+      <small>Made with 💗 for Nisa · BSD &amp; Gading Serpong edition</small>
+    </div>
+  </div>
+
+  <script>
+    const dates = [
+      {
+        emoji: "🌅", title: "Pagi Santai + Ngopi", place: "Scientia Square Park + Fore Coffee",
+        desc: "Jalan pagi atau jogging tipis di Scientia Square Park, udara masih fresh. Lanjut sarapan + ngopi cantik di Fore atau Tanamera. Cocok buat ngobrol santai sambil mulai hari.",
+        time: "Pagi", vibe: "Santai", budget: "Rp 100-200K"
+      },
+      {
+        emoji: "🌊", title: "Lakeside Lunch Date", place: "The Breeze BSD",
+        desc: "Makan siang tepi danau di The Breeze, banyak pilihan resto enak. Abis makan jalan-jalan sore di area outdoor-nya yang adem + estetik buat foto-foto berdua.",
+        time: "Siang", vibe: "Romantic", budget: "Rp 200-400K"
+      },
+      {
+        emoji: "⛸️", title: "Ice Skating Seru", place: "AEON Mall BSD",
+        desc: "Main ice skating bareng — momen pegangan tangan biar gak jatuh tuh wajib. Seru, banyak ketawa, plus foto-foto gemes. Lanjut makan di food court atau cafe.",
+        time: "Siang/Sore", vibe: "Playful", budget: "Rp 150-300K"
+      },
+      {
+        emoji: "🛋️", title: "IKEA Adventure", place: "IKEA Alam Sutera",
+        desc: "Keliling IKEA sambil bayangin rumah masa depan kita — pilih sofa, tes kasur, ngayal dapur impian. Murah meriah tapi cute banget. Ditutup meatball Swedia legendaris.",
+        time: "Siang", vibe: "Cute & Dreamy", budget: "Rp 100-250K"
+      },
+      {
+        emoji: "☕", title: "Cafe Hopping Tour", place: "Gading Serpong",
+        desc: "Tur kafe estetik di Gading Serpong — coba 2-3 tempat berbeda, satu buat kopi, satu buat dessert, satu buat foto. Banyak hidden gem cafe cozy di sini.",
+        time: "Sore", vibe: "Aesthetic", budget: "Rp 150-300K"
+      },
+      {
+        emoji: "🌇", title: "Sunset Tepi Danau", place: "The Breeze BSD",
+        desc: "Datang sore-sore, cari spot tepi sungai/danau, nikmatin sunset bareng sambil ngemil. Golden hour = foto couple paling cakep. Romantis tanpa ribet.",
+        time: "Sore", vibe: "Romantic", budget: "Rp 100-200K"
+      },
+      {
+        emoji: "🎬", title: "Movie Night + Dinner", place: "CGV/XXI Summarecon Mall Serpong",
+        desc: "Nonton film yang kamu pengen (aku ngalah deh), terus dinner di mall. Klasik tapi selalu works. Bonus: aku beliin popcorn caramel kesukaan kamu.",
+        time: "Malam", vibe: "Classic", budget: "Rp 200-400K"
+      },
+      {
+        emoji: "🍝", title: "Cozy Dinner Date", place: "Summarecon Mall Serpong",
+        desc: "Dinner agak fancy berdua — pilih resto yang ambience-nya enak, lampu temaram, makanan enak. Ngobrol panjang tanpa keburu-buru. Quality time maksimal.",
+        time: "Malam", vibe: "Intimate", budget: "Rp 300-600K"
+      },
+      {
+        emoji: "🎤", title: "Karaoke Berdua", place: "Gading Serpong / BSD",
+        desc: "Sewa room karaoke, nyanyi sampai serak, ketawa karena suara fals. Gak ada yang lihat, jadi bebas norak. Salah satu date paling bonding + seru.",
+        time: "Malam", vibe: "Fun", budget: "Rp 150-300K"
+      },
+      {
+        emoji: "🌳", title: "Picnic Sore Estetik", place: "Scientia Square Park",
+        desc: "Bawa tikar + snack + minuman, picnic santai di taman sore-sore. Simple, murah, tapi cozy banget. Sambil dengerin musik dari speaker kecil. Underrated date idea.",
+        time: "Sore", vibe: "Wholesome", budget: "Rp 50-150K"
+      }
+    ];
+
+    // Render cards
+    const cardsEl = document.getElementById('cards');
+    cardsEl.innerHTML = dates.map(d => `
+      <div class="card">
+        <div class="card-head">
+          <div class="card-emoji">${d.emoji}</div>
+          <div>
+            <div class="card-title">${d.title}</div>
+            <div class="card-place">📍 ${d.place}</div>
+          </div>
+        </div>
+        <div class="card-desc">${d.desc}</div>
+        <div class="card-meta">
+          <span class="tag time">🕐 ${d.time}</span>
+          <span class="tag vibe">✨ ${d.vibe}</span>
+          <span class="tag budget">💰 ${d.budget}</span>
+        </div>
+      </div>
+    `).join('');
+
+    // Random picker
+    function spinDate() {
+      const result = document.getElementById('pickerResult');
+      result.classList.remove('show');
+      let count = 0;
+      const interval = setInterval(() => {
+        const r = dates[Math.floor(Math.random() * dates.length)];
+        result.textContent = `${r.emoji} ${r.title}`;
+        count++;
+        if (count > 12) {
+          clearInterval(interval);
+          const final = dates[Math.floor(Math.random() * dates.length)];
+          result.textContent = `${final.emoji} ${final.title}!`;
+          result.classList.add('show');
+        }
+      }, 80);
+      result.classList.add('show');
+    }
+
+    // Floating hearts
+    const heartsEl = document.getElementById('hearts');
+    const heartEmojis = ['💕','💗','🎀','💞','🌸','💝'];
+    for (let i = 0; i < 18; i++) {
+      const h = document.createElement('div');
+      h.className = 'heart';
+      h.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+      h.style.left = Math.random() * 100 + 'vw';
+      h.style.animationDuration = (8 + Math.random() * 10) + 's';
+      h.style.animationDelay = Math.random() * 10 + 's';
+      h.style.fontSize = (0.9 + Math.random() * 1.4) + 'rem';
+      heartsEl.appendChild(h);
+    }
+  </script>
+</body>
+</html>
